@@ -236,208 +236,251 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/pedido')) {
-            // pedido_index
-            if ('/pedido' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_pedido_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'pedido_index');
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\PedidoController::indexAction',  '_route' => 'pedido_index',);
-            }
-            not_pedido_index:
-
-            // pedido_show
-            if (preg_match('#^/pedido/(?P<idpedido>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_pedido_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_show')), array (  '_controller' => 'AppBundle\\Controller\\PedidoController::showAction',));
-            }
-            not_pedido_show:
-
-            // pedido_new
-            if ('/pedido/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_pedido_new;
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\PedidoController::newAction',  '_route' => 'pedido_new',);
-            }
-            not_pedido_new:
-
-            // pedido_edit
-            if (preg_match('#^/pedido/(?P<idpedido>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_pedido_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_edit')), array (  '_controller' => 'AppBundle\\Controller\\PedidoController::editAction',));
-            }
-            not_pedido_edit:
-
-            // pedido_delete
-            if (preg_match('#^/pedido/(?P<idpedido>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_pedido_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\PedidoController::deleteAction',));
-            }
-            not_pedido_delete:
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/pizza')) {
-            // pizza_index
-            if ('/pizza' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_pizza_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'pizza_index');
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\PizzaController::indexAction',  '_route' => 'pizza_index',);
-            }
-            not_pizza_index:
-
-            // pizza_show
-            if (preg_match('#^/pizza/(?P<idpizza>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_pizza_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizza_show')), array (  '_controller' => 'AppBundle\\Controller\\PizzaController::showAction',));
-            }
-            not_pizza_show:
-
-            // pizza_new
-            if ('/pizza/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_pizza_new;
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\PizzaController::newAction',  '_route' => 'pizza_new',);
-            }
-            not_pizza_new:
-
-            // pizza_edit
-            if (preg_match('#^/pizza/(?P<idpizza>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_pizza_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizza_edit')), array (  '_controller' => 'AppBundle\\Controller\\PizzaController::editAction',));
-            }
-            not_pizza_edit:
-
-            // pizza_delete
-            if (preg_match('#^/pizza/(?P<idpizza>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_pizza_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizza_delete')), array (  '_controller' => 'AppBundle\\Controller\\PizzaController::deleteAction',));
-            }
-            not_pizza_delete:
-
-            if (0 === strpos($pathinfo, '/pizzapedido')) {
-                // pizzapedido_index
-                if ('/pizzapedido' === $trimmedPathinfo) {
+        elseif (0 === strpos($pathinfo, '/p')) {
+            if (0 === strpos($pathinfo, '/pedido')) {
+                // pedido_index
+                if ('/pedido' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
                         $allow[] = 'GET';
-                        goto not_pizzapedido_index;
+                        goto not_pedido_index;
                     }
 
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'pizzapedido_index');
+                        return $this->redirect($pathinfo.'/', 'pedido_index');
                     }
 
-                    return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::indexAction',  '_route' => 'pizzapedido_index',);
+                    return array (  '_controller' => 'AppBundle\\Controller\\PedidoController::indexAction',  '_route' => 'pedido_index',);
                 }
-                not_pizzapedido_index:
+                not_pedido_index:
 
-                // pizzapedido_show
-                if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/show$#s', $pathinfo, $matches)) {
+                // pedido_show
+                if (preg_match('#^/pedido/(?P<idpedido>[^/]++)/show$#s', $pathinfo, $matches)) {
                     if ('GET' !== $canonicalMethod) {
                         $allow[] = 'GET';
-                        goto not_pizzapedido_show;
+                        goto not_pedido_show;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_show')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::showAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_show')), array (  '_controller' => 'AppBundle\\Controller\\PedidoController::showAction',));
                 }
-                not_pizzapedido_show:
+                not_pedido_show:
 
-                // pizzapedido_new
-                if ('/pizzapedido/new' === $pathinfo) {
+                // pedido_new
+                if ('/pedido/new' === $pathinfo) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_pizzapedido_new;
+                        goto not_pedido_new;
                     }
 
-                    return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::newAction',  '_route' => 'pizzapedido_new',);
+                    return array (  '_controller' => 'AppBundle\\Controller\\PedidoController::newAction',  '_route' => 'pedido_new',);
                 }
-                not_pizzapedido_new:
+                not_pedido_new:
 
-                // pizzapedido_edit
-                if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                // pedido_edit
+                if (preg_match('#^/pedido/(?P<idpedido>[^/]++)/edit$#s', $pathinfo, $matches)) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_pizzapedido_edit;
+                        goto not_pedido_edit;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_edit')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::editAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_edit')), array (  '_controller' => 'AppBundle\\Controller\\PedidoController::editAction',));
                 }
-                not_pizzapedido_edit:
+                not_pedido_edit:
 
-                // pizzapedido_delete
-                if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                // pedido_delete
+                if (preg_match('#^/pedido/(?P<idpedido>[^/]++)/delete$#s', $pathinfo, $matches)) {
                     if ('DELETE' !== $canonicalMethod) {
                         $allow[] = 'DELETE';
-                        goto not_pizzapedido_delete;
+                        goto not_pedido_delete;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::deleteAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\PedidoController::deleteAction',));
                 }
-                not_pizzapedido_delete:
+                not_pedido_delete:
 
-                // pizzapedido_agregar_pizza
-                if (preg_match('#^/pizzapedido/(?P<idpizza>[^/]++)/agregarpizza$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('POST', 'GET'))) {
-                        $allow = array_merge($allow, array('POST', 'GET'));
-                        goto not_pizzapedido_agregar_pizza;
+            }
+
+            elseif (0 === strpos($pathinfo, '/pizza')) {
+                // pizza_index
+                if ('/pizza' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_pizza_index;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_agregar_pizza')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::agregarPizzaArrayAction',));
-                }
-                not_pizzapedido_agregar_pizza:
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'pizza_index');
+                    }
 
-                // pizzapedido_confirma
-                if ('/pizzapedido/confirma' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::confirmaPedidoAction',  '_route' => 'pizzapedido_confirma',);
+                    return array (  '_controller' => 'AppBundle\\Controller\\PizzaController::indexAction',  '_route' => 'pizza_index',);
+                }
+                not_pizza_index:
+
+                // pizza_show
+                if (preg_match('#^/pizza/(?P<idpizza>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_pizza_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizza_show')), array (  '_controller' => 'AppBundle\\Controller\\PizzaController::showAction',));
+                }
+                not_pizza_show:
+
+                // pizza_new
+                if ('/pizza/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_pizza_new;
+                    }
+
+                    return array (  '_controller' => 'AppBundle\\Controller\\PizzaController::newAction',  '_route' => 'pizza_new',);
+                }
+                not_pizza_new:
+
+                // pizza_edit
+                if (preg_match('#^/pizza/(?P<idpizza>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_pizza_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizza_edit')), array (  '_controller' => 'AppBundle\\Controller\\PizzaController::editAction',));
+                }
+                not_pizza_edit:
+
+                // pizza_delete
+                if (preg_match('#^/pizza/(?P<idpizza>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_pizza_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizza_delete')), array (  '_controller' => 'AppBundle\\Controller\\PizzaController::deleteAction',));
+                }
+                not_pizza_delete:
+
+                if (0 === strpos($pathinfo, '/pizzapedido')) {
+                    // pizzapedido_index
+                    if ('/pizzapedido' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_pizzapedido_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'pizzapedido_index');
+                        }
+
+                        return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::indexAction',  '_route' => 'pizzapedido_index',);
+                    }
+                    not_pizzapedido_index:
+
+                    // pizzapedido_show
+                    if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_pizzapedido_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_show')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::showAction',));
+                    }
+                    not_pizzapedido_show:
+
+                    // pizzapedido_new
+                    if ('/pizzapedido/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_pizzapedido_new;
+                        }
+
+                        return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::newAction',  '_route' => 'pizzapedido_new',);
+                    }
+                    not_pizzapedido_new:
+
+                    // pizzapedido_edit
+                    if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_pizzapedido_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_edit')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::editAction',));
+                    }
+                    not_pizzapedido_edit:
+
+                    // pizzapedido_delete
+                    if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_pizzapedido_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::deleteAction',));
+                    }
+                    not_pizzapedido_delete:
+
+                    // pizzapedido_agregar_pizza
+                    if (preg_match('#^/pizzapedido/(?P<idpizza>[^/]++)/agregarpizza$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('POST', 'GET'))) {
+                            $allow = array_merge($allow, array('POST', 'GET'));
+                            goto not_pizzapedido_agregar_pizza;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_agregar_pizza')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::agregarPizzaArrayAction',));
+                    }
+                    not_pizzapedido_agregar_pizza:
+
+                    // pizzapedido_confirma
+                    if ('/pizzapedido/confirma' === $pathinfo) {
+                        return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::confirmaPedidoAction',  '_route' => 'pizzapedido_confirma',);
+                    }
+
+                    // pizzapedido_cart
+                    if ('/pizzapedido/cart' === $pathinfo) {
+                        return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::verCarritoAction',  '_route' => 'pizzapedido_cart',);
+                    }
+
                 }
 
-                // pizzapedido_cart
-                if ('/pizzapedido/cart' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::verCarritoAction',  '_route' => 'pizzapedido_cart',);
+            }
+
+            elseif (0 === strpos($pathinfo, '/profile')) {
+                // fos_user_profile_show
+                if ('/profile' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_profile_show;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'fos_user_profile_show');
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::showAction',  '_route' => 'fos_user_profile_show',);
                 }
+                not_fos_user_profile_show:
+
+                // fos_user_profile_edit
+                if ('/profile/edit' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_profile_edit;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::editAction',  '_route' => 'fos_user_profile_edit',);
+                }
+                not_fos_user_profile_edit:
+
+                // fos_user_change_password
+                if ('/profile/change-password' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_change_password;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',  '_route' => 'fos_user_change_password',);
+                }
+                not_fos_user_change_password:
 
             }
 
@@ -502,6 +545,143 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'tamanopizza_delete')), array (  '_controller' => 'AppBundle\\Controller\\TamanopizzaController::deleteAction',));
             }
             not_tamanopizza_delete:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_login;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::loginAction',  '_route' => 'fos_user_security_login',);
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_user_security_check;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::checkAction',  '_route' => 'fos_user_security_check',);
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                $allow = array_merge($allow, array('GET', 'POST'));
+                goto not_fos_user_security_logout;
+            }
+
+            return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::logoutAction',  '_route' => 'fos_user_security_logout',);
+        }
+        not_fos_user_security_logout:
+
+        if (0 === strpos($pathinfo, '/register')) {
+            // fos_user_registration_register
+            if ('/register' === $trimmedPathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_registration_register;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'fos_user_registration_register');
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'fos_user_registration_register',);
+            }
+            not_fos_user_registration_register:
+
+            // fos_user_registration_check_email
+            if ('/register/check-email' === $pathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_fos_user_registration_check_email;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
+            }
+            not_fos_user_registration_check_email:
+
+            if (0 === strpos($pathinfo, '/register/confirm')) {
+                // fos_user_registration_confirm
+                if (preg_match('#^/register/confirm/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_registration_confirm;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_registration_confirm')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::confirmAction',));
+                }
+                not_fos_user_registration_confirm:
+
+                // fos_user_registration_confirmed
+                if ('/register/confirmed' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_registration_confirmed;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
+                }
+                not_fos_user_registration_confirmed:
+
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/resetting')) {
+            // fos_user_resetting_request
+            if ('/resetting/request' === $pathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_fos_user_resetting_request;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::requestAction',  '_route' => 'fos_user_resetting_request',);
+            }
+            not_fos_user_resetting_request:
+
+            // fos_user_resetting_reset
+            if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_resetting_reset;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_resetting_reset')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::resetAction',));
+            }
+            not_fos_user_resetting_reset:
+
+            // fos_user_resetting_send_email
+            if ('/resetting/send-email' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_user_resetting_send_email;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
+            }
+            not_fos_user_resetting_send_email:
+
+            // fos_user_resetting_check_email
+            if ('/resetting/check-email' === $pathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_fos_user_resetting_check_email;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ResettingController::checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
+            }
+            not_fos_user_resetting_check_email:
 
         }
 

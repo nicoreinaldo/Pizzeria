@@ -2,10 +2,7 @@
 
 {% block body %}
     <section class="content-header">
-        <h1>
-            Nueva variedad
-            <small>Agregar una nueva pizza</small>
-        </h1>
+        <h1>Agregar Nueva variedad de Pizza</h1>
     </section>
 
 <section class="content">
@@ -14,7 +11,7 @@
             {{ form_start(form) }}
                 {{ form_widget(form) }}
             <br>
-                <input class="btn btn-warning" type="submit" value="Create" />
+                <input class="btn btn-warning" type="submit" value="Crear" />
             {{ form_end(form) }}
         </div>
     </div>
@@ -22,7 +19,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('pizza_index') }}">Back to the list</a>
+            <a href="{{ path('pizza_index') }}">Volver a la Carta</a>
         </li>
     </ul>
 {% endblock %}
