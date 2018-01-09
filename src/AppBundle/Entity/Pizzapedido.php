@@ -2,25 +2,39 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Pizzapedido
+ *
+ * @ORM\Table(name="PizzaPedido", indexes={@ORM\Index(name="idPizza_idx", columns={"idPizza"}), @ORM\Index(name="idPedido_idx", columns={"idPedido"})})
+ * @ORM\Entity
  */
 class Pizzapedido
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="idPizzaPedido", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idpizzapedido;
 
     /**
-     * @var \AppBundle\Entity\Pedido
+     * @var integer
+     *
+     * @ORM\Column(name="idPizza", type="integer", nullable=true)
+     */
+    private $idpizza;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idPedido", type="integer", nullable=true)
      */
     private $idpedido;
 
-    /**
-     * @var \AppBundle\Entity\Pizza
-     */
-    private $idpizza;
 
 
     /**
@@ -34,37 +48,13 @@ class Pizzapedido
     }
 
     /**
-     * Set idpedido
-     *
-     * @param \AppBundle\Entity\Pedido $idpedido
-     *
-     * @return Pizzapedido
-     */
-    public function setIdpedido(\AppBundle\Entity\Pedido $idpedido = null)
-    {
-        $this->idpedido = $idpedido;
-
-        return $this;
-    }
-
-    /**
-     * Get idpedido
-     *
-     * @return \AppBundle\Entity\Pedido
-     */
-    public function getIdpedido()
-    {
-        return $this->idpedido;
-    }
-
-    /**
      * Set idpizza
      *
-     * @param \AppBundle\Entity\Pizza $idpizza
+     * @param integer $idpizza
      *
      * @return Pizzapedido
      */
-    public function setIdpizza(\AppBundle\Entity\Pizza $idpizza = null)
+    public function setIdpizza($idpizza)
     {
         $this->idpizza = $idpizza;
 
@@ -74,11 +64,34 @@ class Pizzapedido
     /**
      * Get idpizza
      *
-     * @return \AppBundle\Entity\Pizza
+     * @return integer
      */
     public function getIdpizza()
     {
         return $this->idpizza;
     }
-}
 
+    /**
+     * Set idpedido
+     *
+     * @param integer $idpedido
+     *
+     * @return Pizzapedido
+     */
+    public function setIdpedido($idpedido)
+    {
+        $this->idpedido = $idpedido;
+
+        return $this;
+    }
+
+    /**
+     * Get idpedido
+     *
+     * @return integer
+     */
+    public function getIdpedido()
+    {
+        return $this->idpedido;
+    }
+}

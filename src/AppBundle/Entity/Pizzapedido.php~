@@ -1,0 +1,40 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Pizzapedido
+ *
+ * @ORM\Table(name="PizzaPedido", indexes={@ORM\Index(name="idPizza_idx", columns={"idPizza"}), @ORM\Index(name="idPedido_idx", columns={"idPedido"})})
+ * @ORM\Entity
+ */
+class Pizzapedido
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idPizzaPedido", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idpizzapedido;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idPizza", type="integer", nullable=true)
+     */
+    private $idpizza;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idPedido", type="integer", nullable=true)
+     */
+    private $idpedido;
+
+
+}
+

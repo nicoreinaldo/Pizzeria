@@ -123,6 +123,9 @@ h4,h5,h6,span,label, .footer {
   color: white;
 	font-family: 'Vollkorn', serif;
 }
+label.required  {
+	color: black;
+}
 
 input[placeholder], [placeholder], *[placeholder] {
     color: white;
@@ -478,6 +481,7 @@ strong{
 }
 .single_contact h5{
 	margin-bottom:10px;
+	color: white;
 }
 .single_contact span{
 	display:block;
@@ -626,7 +630,7 @@ ol{
     margin-right:2px;
     background-color: #69a;
 }*/
-.caption h1,h2,h3,h5,p{
+.caption h1,h2,h3,h5{
 	color: black;
 }
 .caption h4{

@@ -15,14 +15,13 @@ app_pizza:
     resource: "@AppBundle/Resources/config/routing/pizza.yml"
     prefix:   /pizza
 
-
-
 app_tamanopizza:
     resource: "@AppBundle/Resources/config/routing/tamanopizza.yml"
     prefix:   /tamanopizza
 
-
-
 app_pizzapedido:
     resource: "@AppBundle/Resources/config/routing/pizzapedido.yml"
     prefix:   /pizzapedido
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

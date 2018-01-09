@@ -2,25 +2,39 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Tamanopizza
+ *
+ * @ORM\Table(name="TamanoPizza")
+ * @ORM\Entity
  */
 class Tamanopizza
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="idTamanoPizza", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idtamanopizza;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=false)
      */
     private $nombre;
 
     /**
      * @var integer
+     *
+     * @ORM\Column(name="cantPorciones", type="integer", nullable=false)
      */
     private $cantporciones;
+
 
 
     /**
@@ -81,4 +95,3 @@ class Tamanopizza
         return $this->cantporciones;
     }
 }
-

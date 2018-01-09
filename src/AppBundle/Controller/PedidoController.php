@@ -21,12 +21,9 @@ class PedidoController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $pedidos = $em->getRepository('AppBundle:Pedido')->findAll();
-        $pizzapedidos = $em->getRepository('AppBundle:Pizzapedido')->findAll();
-
 
         return $this->render('pedido/index.html.twig', array(
             'pedidos' => $pedidos,
-            'pizzapedidos' => $pizzapedidos,
         ));
     }
 

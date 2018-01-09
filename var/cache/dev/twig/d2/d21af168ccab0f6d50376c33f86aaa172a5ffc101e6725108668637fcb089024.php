@@ -1,6 +1,6 @@
 <?php
 
-/* :default:header.html.twig */
+/* default/header.html.twig */
 class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c972970cbb1 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,16 +15,17 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_74bc191159fb174a354ff75a163b4e3ecdb74475363cce206fcc4ec87d3000ea = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_74bc191159fb174a354ff75a163b4e3ecdb74475363cce206fcc4ec87d3000ea->enter($__internal_74bc191159fb174a354ff75a163b4e3ecdb74475363cce206fcc4ec87d3000ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:header.html.twig"));
+        $__internal_2d50a5200813176b9819bc5c2d37337b7500fedc45d57ebffc06185c92f5ea49 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2d50a5200813176b9819bc5c2d37337b7500fedc45d57ebffc06185c92f5ea49->enter($__internal_2d50a5200813176b9819bc5c2d37337b7500fedc45d57ebffc06185c92f5ea49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
 
-        $__internal_cfabc4b7071fc7399ea43ab484c7190a970590545e8afd19e64ef03bc98f0ee3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cfabc4b7071fc7399ea43ab484c7190a970590545e8afd19e64ef03bc98f0ee3->enter($__internal_cfabc4b7071fc7399ea43ab484c7190a970590545e8afd19e64ef03bc98f0ee3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:header.html.twig"));
+        $__internal_55ea0b6b72b14180b89ea23496e2818cf9690b8af2e95bbb5d7025a4729514b4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_55ea0b6b72b14180b89ea23496e2818cf9690b8af2e95bbb5d7025a4729514b4->enter($__internal_55ea0b6b72b14180b89ea23496e2818cf9690b8af2e95bbb5d7025a4729514b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
 
         // line 1
-        echo "<header class=\"main-header\">
+        echo "
+<header class=\"main-header\">
     <nav class=\"navbar \">
-<div class=\"main_menu_bg navbar-fixed-top wow slideInDown\" data-wow-duration=\"1s\">
+    <div class=\"main_menu_bg navbar-fixed-top wow slideInDown\" data-wow-duration=\"1s\">
     
         <div class=\"container\">
             <div class=\"navbar-header\">
@@ -38,76 +39,74 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
             <div class=\"collapse navbar-collapse pull-left\" id=\"navbar-collapse\">
                 <ul class=\"nav navbar-nav\">
                     <li class=\"\"><a href=\"/pizza\">Pizzas <span class=\"sr-only\">(current)</span></a></li>
-                    <li class=\"\"><a href=\"/pedido\">Pedidos</a></li>
+                    <li class=\"\"><a href=\"/pizzapedido/cart\">Pedidos</a></li>
                     <li><a href=\"#footer\">Contacto <span class=\"sr-only\">(current)</span></a></li>
 
                 </ul>
-
             </div>
             <!-- /.navbar-collapse -->
             <!-- Navbar Right Menu -->
             <div class=\"navbar-custom-menu\">
                 <ul class=\"nav navbar-nav\">
-                    <!-- Messages: style can be found in dropdown.less-->
 
-                    <!-- /.messages-menu -->
-
-
-                    <!-- User Account Menu -->
                     <li class=\"dropdown user user-menu\">
                         <!-- Menu Toggle Button -->
-                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
+                        <a href=\"#\" class=\"dropdown-toggle active\" data-toggle=\"dropdown\"  aria-haspopup=\"true\" aria-expanded=\"false\">
                             <!-- The user image in the navbar-->
                             <img src=\"";
-        // line 37
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("asset/dist/img/user2-160x160.jpg"), "html", null, true);
         echo "\" class=\"user-image\" alt=\"User Image\">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class=\"hidden-xs\">Nicolas Reinaldo</span>
+                            <span class=\"hidden-xs\">";
+        // line 34
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+        echo "</span>
+
                         </a>
                         <ul class=\"dropdown-menu\">
                             <!-- The user image in the menu -->
                             <li class=\"user-header\">
                                 <img src=\"";
-        // line 44
+        // line 40
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("asset/dist/img/user2-160x160.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"User Image\">
-
-                                <p>
-                                    Nicolas Reinaldo
+                                <p>  ";
+        // line 41
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+        echo "
                                     <small>Estudiante en Desarrollo de Software</small>
                                 </p>
                             </li>
                             <!-- Menu Footer-->
                             <li class=\"user-footer\">
                                 <div class=\"pull-left\">
-                                    <a href=\"#\" class=\"btn btn-default btn-flat\">Perfil</a>
+                                    <a href=\"/profile/\" class=\"btn btn-default btn-flat\">Perfil</a>
                                 </div>
                                 <div class=\"pull-right\">
-                                    <a href=\"#\" class=\"btn btn-default btn-flat\">Cerrar Secion</a>
+                                    <a href=\"/logout\" class=\"btn btn-default btn-flat\">Cerrar Ses   ion</a>
                                 </div>
                             </li>
                         </ul>
                     </li>
                 </ul>
+
             </div>
-            <!-- /.navbar-custom-menu -->
         </div>
-        <!-- /.container-fluid -->
+        </div>
     </nav>
-</div>
 </header>";
         
-        $__internal_74bc191159fb174a354ff75a163b4e3ecdb74475363cce206fcc4ec87d3000ea->leave($__internal_74bc191159fb174a354ff75a163b4e3ecdb74475363cce206fcc4ec87d3000ea_prof);
+        $__internal_2d50a5200813176b9819bc5c2d37337b7500fedc45d57ebffc06185c92f5ea49->leave($__internal_2d50a5200813176b9819bc5c2d37337b7500fedc45d57ebffc06185c92f5ea49_prof);
 
         
-        $__internal_cfabc4b7071fc7399ea43ab484c7190a970590545e8afd19e64ef03bc98f0ee3->leave($__internal_cfabc4b7071fc7399ea43ab484c7190a970590545e8afd19e64ef03bc98f0ee3_prof);
+        $__internal_55ea0b6b72b14180b89ea23496e2818cf9690b8af2e95bbb5d7025a4729514b4->leave($__internal_55ea0b6b72b14180b89ea23496e2818cf9690b8af2e95bbb5d7025a4729514b4_prof);
 
     }
 
     public function getTemplateName()
     {
-        return ":default:header.html.twig";
+        return "default/header.html.twig";
     }
 
     public function isTraitable()
@@ -117,7 +116,7 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
 
     public function getDebugInfo()
     {
-        return array (  73 => 44,  63 => 37,  25 => 1,);
+        return array (  76 => 41,  72 => 40,  63 => 34,  58 => 32,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -130,9 +129,10 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
 
     public function getSourceContext()
     {
-        return new Twig_Source("<header class=\"main-header\">
+        return new Twig_Source("
+<header class=\"main-header\">
     <nav class=\"navbar \">
-<div class=\"main_menu_bg navbar-fixed-top wow slideInDown\" data-wow-duration=\"1s\">
+    <div class=\"main_menu_bg navbar-fixed-top wow slideInDown\" data-wow-duration=\"1s\">
     
         <div class=\"container\">
             <div class=\"navbar-header\">
@@ -146,58 +146,50 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
             <div class=\"collapse navbar-collapse pull-left\" id=\"navbar-collapse\">
                 <ul class=\"nav navbar-nav\">
                     <li class=\"\"><a href=\"/pizza\">Pizzas <span class=\"sr-only\">(current)</span></a></li>
-                    <li class=\"\"><a href=\"/pedido\">Pedidos</a></li>
+                    <li class=\"\"><a href=\"/pizzapedido/cart\">Pedidos</a></li>
                     <li><a href=\"#footer\">Contacto <span class=\"sr-only\">(current)</span></a></li>
 
                 </ul>
-
             </div>
             <!-- /.navbar-collapse -->
             <!-- Navbar Right Menu -->
             <div class=\"navbar-custom-menu\">
                 <ul class=\"nav navbar-nav\">
-                    <!-- Messages: style can be found in dropdown.less-->
 
-                    <!-- /.messages-menu -->
-
-
-                    <!-- User Account Menu -->
                     <li class=\"dropdown user user-menu\">
                         <!-- Menu Toggle Button -->
-                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
+                        <a href=\"#\" class=\"dropdown-toggle active\" data-toggle=\"dropdown\"  aria-haspopup=\"true\" aria-expanded=\"false\">
                             <!-- The user image in the navbar-->
                             <img src=\"{{ asset('asset/dist/img/user2-160x160.jpg')}}\" class=\"user-image\" alt=\"User Image\">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class=\"hidden-xs\">Nicolas Reinaldo</span>
+                            <span class=\"hidden-xs\">{{ app.user.username }}</span>
+
                         </a>
                         <ul class=\"dropdown-menu\">
                             <!-- The user image in the menu -->
                             <li class=\"user-header\">
                                 <img src=\"{{ asset('asset/dist/img/user2-160x160.jpg') }}\" class=\"img-circle\" alt=\"User Image\">
-
-                                <p>
-                                    Nicolas Reinaldo
+                                <p>  {{ app.user.username }}
                                     <small>Estudiante en Desarrollo de Software</small>
                                 </p>
                             </li>
                             <!-- Menu Footer-->
                             <li class=\"user-footer\">
                                 <div class=\"pull-left\">
-                                    <a href=\"#\" class=\"btn btn-default btn-flat\">Perfil</a>
+                                    <a href=\"/profile/\" class=\"btn btn-default btn-flat\">Perfil</a>
                                 </div>
                                 <div class=\"pull-right\">
-                                    <a href=\"#\" class=\"btn btn-default btn-flat\">Cerrar Secion</a>
+                                    <a href=\"/logout\" class=\"btn btn-default btn-flat\">Cerrar Ses   ion</a>
                                 </div>
                             </li>
                         </ul>
                     </li>
                 </ul>
+
             </div>
-            <!-- /.navbar-custom-menu -->
         </div>
-        <!-- /.container-fluid -->
+        </div>
     </nav>
-</div>
-</header>", ":default:header.html.twig", "/home/nico/pizzerianostra/app/Resources/views/default/header.html.twig");
+</header>", "default/header.html.twig", "/home/nico/pizzerianostra/app/Resources/views/default/header.html.twig");
     }
 }

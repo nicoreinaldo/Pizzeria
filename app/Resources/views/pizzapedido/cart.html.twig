@@ -1,16 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Carrito</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Precio</th>
+    <section class="content-header">
+        <h1> Carro de Compras</h1>
+    </section>
 
-        </tr>
-        </thead>
+    <table class="table">
+        <div class="col-xs-6">
+          <div class="table-responsive">
+            <tr>
+                <th><strong>Nombre</strong></th>
+                <th><strong>Descripcion</strong></th>
+                <th><strong>Precio</strong></th>
+            </tr>
+            
         <tbody>
         {% for pizza in cart %}
             <tr>
@@ -19,12 +22,13 @@
                 <td> {{ pizza.descripcion }}</td>
 
                 <td> {{ pizza.precio }}</td>
-
-
             </tr>
+            </div>
+        </div>
         {% endfor %}
-        </tbody>
     </table>
+        </tbody>
+
 
 
     <ul>

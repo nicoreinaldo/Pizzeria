@@ -2,25 +2,39 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Cliente
+ *
+ * @ORM\Table(name="Cliente")
+ * @ORM\Entity
  */
 class Cliente
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="idCliente", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idcliente;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=false)
      */
     private $nombre;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=45, nullable=false)
      */
     private $direccion;
+
 
 
     /**
@@ -81,4 +95,3 @@ class Cliente
         return $this->direccion;
     }
 }
-

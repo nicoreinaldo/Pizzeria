@@ -23,29 +23,29 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dc5f9dfd61ad9fd186caab3149e3eafd282ad608d37b30d36b0fc2a938bec87b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dc5f9dfd61ad9fd186caab3149e3eafd282ad608d37b30d36b0fc2a938bec87b->enter($__internal_dc5f9dfd61ad9fd186caab3149e3eafd282ad608d37b30d36b0fc2a938bec87b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:index.html.twig"));
+        $__internal_b021fc2288f3bf86d531b2f0a0abc41676b1b19a2b5aeebf894e62fc5b9436dc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b021fc2288f3bf86d531b2f0a0abc41676b1b19a2b5aeebf894e62fc5b9436dc->enter($__internal_b021fc2288f3bf86d531b2f0a0abc41676b1b19a2b5aeebf894e62fc5b9436dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:index.html.twig"));
 
-        $__internal_79cc03cd1972d9a847f471423c6ad745cba6b0678b6dd870595ee36d07826306 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_79cc03cd1972d9a847f471423c6ad745cba6b0678b6dd870595ee36d07826306->enter($__internal_79cc03cd1972d9a847f471423c6ad745cba6b0678b6dd870595ee36d07826306_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:index.html.twig"));
+        $__internal_6d48d00129279c82c1fb340a471d4987d27ec9344423c7f40f134911baf0ca6d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6d48d00129279c82c1fb340a471d4987d27ec9344423c7f40f134911baf0ca6d->enter($__internal_6d48d00129279c82c1fb340a471d4987d27ec9344423c7f40f134911baf0ca6d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_dc5f9dfd61ad9fd186caab3149e3eafd282ad608d37b30d36b0fc2a938bec87b->leave($__internal_dc5f9dfd61ad9fd186caab3149e3eafd282ad608d37b30d36b0fc2a938bec87b_prof);
+        $__internal_b021fc2288f3bf86d531b2f0a0abc41676b1b19a2b5aeebf894e62fc5b9436dc->leave($__internal_b021fc2288f3bf86d531b2f0a0abc41676b1b19a2b5aeebf894e62fc5b9436dc_prof);
 
         
-        $__internal_79cc03cd1972d9a847f471423c6ad745cba6b0678b6dd870595ee36d07826306->leave($__internal_79cc03cd1972d9a847f471423c6ad745cba6b0678b6dd870595ee36d07826306_prof);
+        $__internal_6d48d00129279c82c1fb340a471d4987d27ec9344423c7f40f134911baf0ca6d->leave($__internal_6d48d00129279c82c1fb340a471d4987d27ec9344423c7f40f134911baf0ca6d_prof);
 
     }
 
     // line 3
     public function block_styleshetts($context, array $blocks = array())
     {
-        $__internal_42f4988a531c6a743ffaa520c7f091b9623b8b306795a73b46c799a06df75004 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_42f4988a531c6a743ffaa520c7f091b9623b8b306795a73b46c799a06df75004->enter($__internal_42f4988a531c6a743ffaa520c7f091b9623b8b306795a73b46c799a06df75004_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
+        $__internal_74b4c83742daaa63ae78f77ff1acc593b3269cc71a06ba5466947625fb6dcfc6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_74b4c83742daaa63ae78f77ff1acc593b3269cc71a06ba5466947625fb6dcfc6->enter($__internal_74b4c83742daaa63ae78f77ff1acc593b3269cc71a06ba5466947625fb6dcfc6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
 
-        $__internal_9ceaadf8dffe2cb6d6ad78c53148bf0655eeba10283e995776ac79980a64db44 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9ceaadf8dffe2cb6d6ad78c53148bf0655eeba10283e995776ac79980a64db44->enter($__internal_9ceaadf8dffe2cb6d6ad78c53148bf0655eeba10283e995776ac79980a64db44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
+        $__internal_b4e5835f2a645a14a767145a3226f03e4e403e331dca1b0e5d1ea95b5c762544 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b4e5835f2a645a14a767145a3226f03e4e403e331dca1b0e5d1ea95b5c762544->enter($__internal_b4e5835f2a645a14a767145a3226f03e4e403e331dca1b0e5d1ea95b5c762544_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
 
         // line 4
         echo "    ";
@@ -55,21 +55,21 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
         echo "
 ";
         
-        $__internal_9ceaadf8dffe2cb6d6ad78c53148bf0655eeba10283e995776ac79980a64db44->leave($__internal_9ceaadf8dffe2cb6d6ad78c53148bf0655eeba10283e995776ac79980a64db44_prof);
+        $__internal_b4e5835f2a645a14a767145a3226f03e4e403e331dca1b0e5d1ea95b5c762544->leave($__internal_b4e5835f2a645a14a767145a3226f03e4e403e331dca1b0e5d1ea95b5c762544_prof);
 
         
-        $__internal_42f4988a531c6a743ffaa520c7f091b9623b8b306795a73b46c799a06df75004->leave($__internal_42f4988a531c6a743ffaa520c7f091b9623b8b306795a73b46c799a06df75004_prof);
+        $__internal_74b4c83742daaa63ae78f77ff1acc593b3269cc71a06ba5466947625fb6dcfc6->leave($__internal_74b4c83742daaa63ae78f77ff1acc593b3269cc71a06ba5466947625fb6dcfc6_prof);
 
     }
 
     // line 8
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c8746faf941e66abc75dd54eea884b6367fb719f35d1fd85b8f8b27dcce2dbc6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c8746faf941e66abc75dd54eea884b6367fb719f35d1fd85b8f8b27dcce2dbc6->enter($__internal_c8746faf941e66abc75dd54eea884b6367fb719f35d1fd85b8f8b27dcce2dbc6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_247f9853226224a9f79f6aaec1a376c307a1cd9256085a37ebdc9d2ccb0011af = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_247f9853226224a9f79f6aaec1a376c307a1cd9256085a37ebdc9d2ccb0011af->enter($__internal_247f9853226224a9f79f6aaec1a376c307a1cd9256085a37ebdc9d2ccb0011af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_5c1a0b6d7992b3504e6bf47d14815abeeff76e80357c843223dc981a3577c38f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5c1a0b6d7992b3504e6bf47d14815abeeff76e80357c843223dc981a3577c38f->enter($__internal_5c1a0b6d7992b3504e6bf47d14815abeeff76e80357c843223dc981a3577c38f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8391a3256999079492cb93494dd421019a6cf1993da6a6f886f0605a4b073d37 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8391a3256999079492cb93494dd421019a6cf1993da6a6f886f0605a4b073d37->enter($__internal_8391a3256999079492cb93494dd421019a6cf1993da6a6f886f0605a4b073d37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
         echo "\t<div class='preloader'>
@@ -143,19 +143,16 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 \t\t\t\t\t\t\t\t<div class=\"single_menus wow slideInLeft \" data-wow-duration=\"1.5s\">
 \t\t\t\t\t\t\t\t\t<ul class=\"list-group\">
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$115</span> <strong>Napolitana.</strong>  <p> Tomate al horno y albahaca</p>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$100</span> <strong>Muzarella</strong>   <p> Queso Muzarella</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$125</span><strong>Queso Azul, Jamón, Setas y Hortalizas</strong>   <p> Queso azul, jamón, setas y hortalizas</p>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$115</span> <strong>Napolitana.</strong>  <p> Tomate al horno y albahaca</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$186</span><strong>  Salami</strong> <p> Queso, Salami, Aceitunas negras</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$174</span><strong> Mediterranea</strong>   <p>Pimentón asado, zuquini, aceitunas, calabacín, y tomates marinados.</p>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$200</span>  <strong>Pollo y Champiñones</strong> <p> Muzzarella , pollo trozado y Champiñones frescos</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$100</span> <strong>Pollo</strong>   <p> Pollo trozado con salsa roja</p>
@@ -181,9 +178,6 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$200</span> <strong> Cuatro quesos</strong> <p>Muzarella, Roquefort, Provolone, Zardo </p>
 \t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$100</span> <strong>Muzarella</strong>   <p> Queso Muzarella</p>
-\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -196,32 +190,32 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 \t</section>
 ";
         
-        $__internal_5c1a0b6d7992b3504e6bf47d14815abeeff76e80357c843223dc981a3577c38f->leave($__internal_5c1a0b6d7992b3504e6bf47d14815abeeff76e80357c843223dc981a3577c38f_prof);
+        $__internal_8391a3256999079492cb93494dd421019a6cf1993da6a6f886f0605a4b073d37->leave($__internal_8391a3256999079492cb93494dd421019a6cf1993da6a6f886f0605a4b073d37_prof);
 
         
-        $__internal_c8746faf941e66abc75dd54eea884b6367fb719f35d1fd85b8f8b27dcce2dbc6->leave($__internal_c8746faf941e66abc75dd54eea884b6367fb719f35d1fd85b8f8b27dcce2dbc6_prof);
+        $__internal_247f9853226224a9f79f6aaec1a376c307a1cd9256085a37ebdc9d2ccb0011af->leave($__internal_247f9853226224a9f79f6aaec1a376c307a1cd9256085a37ebdc9d2ccb0011af_prof);
 
     }
 
-    // line 133
+    // line 127
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_6d874edf6759b95b28c86bba562e85dc05d1051bcc988f6094bbdea004a5437d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6d874edf6759b95b28c86bba562e85dc05d1051bcc988f6094bbdea004a5437d->enter($__internal_6d874edf6759b95b28c86bba562e85dc05d1051bcc988f6094bbdea004a5437d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_45af02c28fd1aecc7d176c49dbb3e5ef6205642cb19ee721f301481e9cf045dd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_45af02c28fd1aecc7d176c49dbb3e5ef6205642cb19ee721f301481e9cf045dd->enter($__internal_45af02c28fd1aecc7d176c49dbb3e5ef6205642cb19ee721f301481e9cf045dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_bbfac2e0f0fd063ea694fa5d78524acd97be3b0c5a409b7a9b6527c769fa9ce4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bbfac2e0f0fd063ea694fa5d78524acd97be3b0c5a409b7a9b6527c769fa9ce4->enter($__internal_bbfac2e0f0fd063ea694fa5d78524acd97be3b0c5a409b7a9b6527c769fa9ce4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_39610892294cfb2cf46ad1656d3257cdc6178a390c328d3d9bdfca6cf5219666 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_39610892294cfb2cf46ad1656d3257cdc6178a390c328d3d9bdfca6cf5219666->enter($__internal_39610892294cfb2cf46ad1656d3257cdc6178a390c328d3d9bdfca6cf5219666_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 134
+        // line 128
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 ";
         
-        $__internal_bbfac2e0f0fd063ea694fa5d78524acd97be3b0c5a409b7a9b6527c769fa9ce4->leave($__internal_bbfac2e0f0fd063ea694fa5d78524acd97be3b0c5a409b7a9b6527c769fa9ce4_prof);
+        $__internal_39610892294cfb2cf46ad1656d3257cdc6178a390c328d3d9bdfca6cf5219666->leave($__internal_39610892294cfb2cf46ad1656d3257cdc6178a390c328d3d9bdfca6cf5219666_prof);
 
         
-        $__internal_6d874edf6759b95b28c86bba562e85dc05d1051bcc988f6094bbdea004a5437d->leave($__internal_6d874edf6759b95b28c86bba562e85dc05d1051bcc988f6094bbdea004a5437d_prof);
+        $__internal_45af02c28fd1aecc7d176c49dbb3e5ef6205642cb19ee721f301481e9cf045dd->leave($__internal_45af02c28fd1aecc7d176c49dbb3e5ef6205642cb19ee721f301481e9cf045dd_prof);
 
     }
 
@@ -237,7 +231,7 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 
     public function getDebugInfo()
     {
-        return array (  216 => 134,  207 => 133,  75 => 9,  66 => 8,  53 => 5,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  210 => 128,  201 => 127,  75 => 9,  66 => 8,  53 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -329,19 +323,16 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 \t\t\t\t\t\t\t\t<div class=\"single_menus wow slideInLeft \" data-wow-duration=\"1.5s\">
 \t\t\t\t\t\t\t\t\t<ul class=\"list-group\">
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$115</span> <strong>Napolitana.</strong>  <p> Tomate al horno y albahaca</p>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$100</span> <strong>Muzarella</strong>   <p> Queso Muzarella</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$125</span><strong>Queso Azul, Jamón, Setas y Hortalizas</strong>   <p> Queso azul, jamón, setas y hortalizas</p>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$115</span> <strong>Napolitana.</strong>  <p> Tomate al horno y albahaca</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$186</span><strong>  Salami</strong> <p> Queso, Salami, Aceitunas negras</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$174</span><strong> Mediterranea</strong>   <p>Pimentón asado, zuquini, aceitunas, calabacín, y tomates marinados.</p>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$200</span>  <strong>Pollo y Champiñones</strong> <p> Muzzarella , pollo trozado y Champiñones frescos</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$100</span> <strong>Pollo</strong>   <p> Pollo trozado con salsa roja</p>
@@ -366,9 +357,6 @@ class __TwigTemplate_c12f1c8e427dafa37c304deaf8933f5490e0b276f70ac2796157b4e87ca
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$200</span> <strong> Cuatro quesos</strong> <p>Muzarella, Roquefort, Provolone, Zardo </p>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge\">\$100</span> <strong>Muzarella</strong>   <p> Queso Muzarella</p>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</div>

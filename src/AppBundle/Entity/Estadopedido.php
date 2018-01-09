@@ -2,20 +2,32 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Estadopedido
+ *
+ * @ORM\Table(name="EstadoPedido")
+ * @ORM\Entity
  */
 class Estadopedido
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="idEstadoPedido", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idestadopedido;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=false)
      */
     private $nombre;
+
 
 
     /**
@@ -52,4 +64,3 @@ class Estadopedido
         return $this->nombre;
     }
 }
-

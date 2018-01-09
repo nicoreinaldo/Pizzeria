@@ -26,45 +26,38 @@
      
     <br>
 <section class="content">
-    <div class="row">
-        <div class="col-xs-12">
-            <div id="gallery" class="portfolio">
-                <div class="container">
-                    <div class="sap_tabs">
-                        <div id="horizontalTab">
-                            <div class="resp-tabs-container">
-                                <div class="tab-1 resp-tab-content">
+  <div class="row">
+    <div class="col-xs-12">
+        <div id="gallery" class="portfolio">
+            <div class="container">
+                <div class="sap_tabs">
+                    <div id="horizontalTab">
+                        <div class="resp-tabs-container">
+                            <div class="tab-1 resp-tab-content">
 
-        {% for pizza in pizzas %}
-            <tr>
-
-                <div class="col-md-4 portfolio-grids">
-                    <div class="sc-product-item thumbnail">
-
-                 {#        <img src='asset/images/ga7.jpg' data-big-src='asset/images/ga1.jpg' class="img-responsive" alt=" "/> #}
-                        <div class="caption">
-                            <h4 data-name="product_name">Pizza {{ pizza.nombre }}</h4>
-                            <p data-name="product_desc">{{ pizza.descripcion }}</p>
-                            <hr class="line">
-                            <div>
-                                <h4 class="price pull-left espacio">${{ pizza.precio }}</h4>
-
-                                <a href="{{ path('pizza_show', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Ver</a>
-                                <a href="{{ path('pizza_edit', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary">Editar</a>
-
-                                <a class="sc-add-to-cart btn btn-success btn-sm pull-right" href="{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Agregar al carrito</a>
-
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-            </tr>
-        {% endfor %}
-        </div>
+    {% for pizza in pizzas %}
+        <tr>
+          <div class="col-md-4 portfolio-grids">
+              <div class="sc-product-item thumbnail">
+                  <div class="caption">
+                      <h4 data-name="product_name">{{ pizza.nombre }}</h4>
+                      <p data-name="product_desc">{{ pizza.descripcion }}</p>
+                      <hr class="line">
+                      <div>
+                          <h4 class="price pull-left espacio">${{ pizza.precio }}</h4>
+                          <a href="{{ path('pizza_show', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Ver</a>
+                          <a href="{{ path('pizza_edit', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary">Editar</a>
+                          <a class="sc-add-to-cart btn btn-success btn-sm pull-right" href="{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Agregar al carrito</a>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
+            </div>
+        </tr>
+    {% endfor %}
     </div>
+  </div>
 </section>
 
 {% endblock %}

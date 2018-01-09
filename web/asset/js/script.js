@@ -29,7 +29,12 @@ $("html, body").animate({ scrollTop: 0 }, 2000);
 return false;
 });
 
-
+//<!-- Este le faltaba para que se bajara el menusito del perfil-->
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
 
 
 //<!-- =============================================== -->

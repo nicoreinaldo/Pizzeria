@@ -2,35 +2,53 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Pizza
+ *
+ * @ORM\Table(name="Pizza", indexes={@ORM\Index(name="idTamanoPizza_idx", columns={"idTamanoPizza"})})
+ * @ORM\Entity
  */
 class Pizza
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="idPizza", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idpizza;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="idTamanoPizza", type="integer", nullable=true)
+     */
+    private $idtamanopizza;
+
+    /**
      * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=false)
      */
     private $nombre;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="precio", type="string", length=45, nullable=false)
      */
     private $precio;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=255, nullable=false)
      */
     private $descripcion;
 
-    /**
-     * @var \AppBundle\Entity\Tamanopizza
-     */
-    private $idtamanopizza;
 
 
     /**
@@ -41,6 +59,30 @@ class Pizza
     public function getIdpizza()
     {
         return $this->idpizza;
+    }
+
+    /**
+     * Set idtamanopizza
+     *
+     * @param integer $idtamanopizza
+     *
+     * @return Pizza
+     */
+    public function setIdtamanopizza($idtamanopizza)
+    {
+        $this->idtamanopizza = $idtamanopizza;
+
+        return $this;
+    }
+
+    /**
+     * Get idtamanopizza
+     *
+     * @return integer
+     */
+    public function getIdtamanopizza()
+    {
+        return $this->idtamanopizza;
     }
 
     /**
@@ -114,29 +156,4 @@ class Pizza
     {
         return $this->descripcion;
     }
-
-    /**
-     * Set idtamanopizza
-     *
-     * @param \AppBundle\Entity\Tamanopizza $idtamanopizza
-     *
-     * @return Pizza
-     */
-    public function setIdtamanopizza(\AppBundle\Entity\Tamanopizza $idtamanopizza = null)
-    {
-        $this->idtamanopizza = $idtamanopizza;
-
-        return $this;
-    }
-
-    /**
-     * Get idtamanopizza
-     *
-     * @return \AppBundle\Entity\Tamanopizza
-     */
-    public function getIdtamanopizza()
-    {
-        return $this->idtamanopizza;
-    }
 }
-

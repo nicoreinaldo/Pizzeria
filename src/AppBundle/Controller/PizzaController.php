@@ -78,7 +78,7 @@ class PizzaController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('pizza_edit', array('idpizza' => $pizza->getIdpizza()));
+            return $this->redirectToRoute('pizza_index', array('idpizza' => $pizza->getIdpizza()));
         }
 
         return $this->render('pizza/edit.html.twig', array(
