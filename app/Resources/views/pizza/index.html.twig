@@ -14,9 +14,11 @@
         </h1>
         <ol class="breadcrumb">
             <div class="margin pull-right">
+              {% if is_granted('ROLE_ADMIN') %}
                 <div class="btn-group">
                     <a href="{{ path('pizza_new') }}" class="btn btn-success">Agregar variedad de Pizza</a>
                 </div>
+              {% endif %}
                 <div class="btn-group">
                     <a href="{{ path('pizzapedido_cart') }}" class="btn btn-danger">Ver Carrito</a>
                 </div>
@@ -45,8 +47,10 @@
                       <hr class="line">
                       <div>
                           <h4 class="price pull-left espacio">${{ pizza.precio }}</h4>
+                        {% if is_granted('ROLE_ADMIN') %}
                           <a href="{{ path('pizza_show', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Ver</a>
                           <a href="{{ path('pizza_edit', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary">Editar</a>
+                        {% endif %}
                           <a class="sc-add-to-cart btn btn-success btn-sm pull-right" href="{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Agregar al carrito</a>
                       </div>
                       <div class="clearfix"></div>
