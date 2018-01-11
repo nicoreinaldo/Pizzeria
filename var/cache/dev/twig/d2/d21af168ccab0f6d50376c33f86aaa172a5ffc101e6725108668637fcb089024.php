@@ -15,11 +15,11 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b74cf2e9c592d0c2d8d3ef7b7850931d4f1fa67ed43b5c4609c1e512c7608352 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b74cf2e9c592d0c2d8d3ef7b7850931d4f1fa67ed43b5c4609c1e512c7608352->enter($__internal_b74cf2e9c592d0c2d8d3ef7b7850931d4f1fa67ed43b5c4609c1e512c7608352_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
+        $__internal_c92d8de4f9b829d901f2a89d5113825eaca3ab1d254232105fe750b1a19892e0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c92d8de4f9b829d901f2a89d5113825eaca3ab1d254232105fe750b1a19892e0->enter($__internal_c92d8de4f9b829d901f2a89d5113825eaca3ab1d254232105fe750b1a19892e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
 
-        $__internal_8451d040a1d86269dcc1cc58c3e3215ad0b9cdc5ad90ee04e231cf346bad7884 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8451d040a1d86269dcc1cc58c3e3215ad0b9cdc5ad90ee04e231cf346bad7884->enter($__internal_8451d040a1d86269dcc1cc58c3e3215ad0b9cdc5ad90ee04e231cf346bad7884_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
+        $__internal_1299cd2573fa3a2c48809f091a271b706701714068de8acba98bf3817f6087f0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1299cd2573fa3a2c48809f091a271b706701714068de8acba98bf3817f6087f0->enter($__internal_1299cd2573fa3a2c48809f091a271b706701714068de8acba98bf3817f6087f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
 
         // line 1
         echo "
@@ -39,8 +39,16 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
             <div class=\"collapse navbar-collapse pull-left\" id=\"navbar-collapse\">
                 <ul class=\"nav navbar-nav\">
                     <li class=\"\"><a href=\"/pizza\">Pizzas <span class=\"sr-only\">(current)</span></a></li>
-                    <li class=\"\"><a href=\"/pizzapedido/cart\">Pedidos</a></li>
-                    <li><a href=\"#footer\">Contacto <span class=\"sr-only\">(current)</span></a></li>
+                    <li class=\"\"><a href=\"/pizzapedido/cart\">Carrito</a></li>
+                    ";
+        // line 19
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
+            // line 20
+            echo "                        <li class=\"\"><a href=\"/pedido\">Pedidos</a></li>
+                    ";
+        }
+        // line 22
+        echo "                    <li><a href=\"#footer\">Contacto <span class=\"sr-only\">(current)</span></a></li>
 
                 </ul>
             </div>
@@ -52,37 +60,37 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
                         <!-- Menu Toggle Button -->
                         <a href=\"#\" class=\"dropdown-toggle active\" data-toggle=\"dropdown\"  aria-haspopup=\"true\" aria-expanded=\"false\">
                             ";
-        // line 30
+        // line 33
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 31
+            // line 34
             echo "                                <img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("asset/dist/img/user2-160x160.jpg"), "html", null, true);
             echo "\" class=\"user-image\" alt=\"User Image\">
                                  <span class=\"hidden-xs\"> ";
-            // line 32
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</span>
                             ";
         } else {
-            // line 34
+            // line 37
             echo "                                <a href=\"/login\" style=\"margin-top: -20px;\" ><span class=\"hidden-xs\">Iniciar Sesion</span></a>
                             ";
         }
-        // line 36
+        // line 39
         echo "                        </a>
                         <ul class=\"dropdown-menu\">
                             <!-- The user image in the menu -->
                             ";
-        // line 39
+        // line 42
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 40
+            // line 43
             echo "                                <li class=\"user-header\">
                                     <img src=\"";
-            // line 41
+            // line 44
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("asset/dist/img/user2-160x160.jpg"), "html", null, true);
             echo "\" class=\"img-circle\" alt=\"User Image\">
                                      <p> ";
-            // line 42
+            // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</p>
                                      <small>Estudiante en Desarrollo de Software</small>
@@ -98,7 +106,7 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
                                 </li>
                             ";
         }
-        // line 54
+        // line 57
         echo "                            
                         </ul>
                     </li>
@@ -110,10 +118,10 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
     </nav>
 </header>";
         
-        $__internal_b74cf2e9c592d0c2d8d3ef7b7850931d4f1fa67ed43b5c4609c1e512c7608352->leave($__internal_b74cf2e9c592d0c2d8d3ef7b7850931d4f1fa67ed43b5c4609c1e512c7608352_prof);
+        $__internal_c92d8de4f9b829d901f2a89d5113825eaca3ab1d254232105fe750b1a19892e0->leave($__internal_c92d8de4f9b829d901f2a89d5113825eaca3ab1d254232105fe750b1a19892e0_prof);
 
         
-        $__internal_8451d040a1d86269dcc1cc58c3e3215ad0b9cdc5ad90ee04e231cf346bad7884->leave($__internal_8451d040a1d86269dcc1cc58c3e3215ad0b9cdc5ad90ee04e231cf346bad7884_prof);
+        $__internal_1299cd2573fa3a2c48809f091a271b706701714068de8acba98bf3817f6087f0->leave($__internal_1299cd2573fa3a2c48809f091a271b706701714068de8acba98bf3817f6087f0_prof);
 
     }
 
@@ -129,7 +137,7 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
 
     public function getDebugInfo()
     {
-        return array (  102 => 54,  86 => 42,  82 => 41,  79 => 40,  77 => 39,  72 => 36,  68 => 34,  63 => 32,  58 => 31,  56 => 30,  25 => 1,);
+        return array (  110 => 57,  94 => 45,  90 => 44,  87 => 43,  85 => 42,  80 => 39,  76 => 37,  71 => 35,  66 => 34,  64 => 33,  51 => 22,  47 => 20,  45 => 19,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -159,7 +167,10 @@ class __TwigTemplate_189c7ec4f97153cd5bec9d9e9bfc3d8e86c63d77d927f470fd954c97297
             <div class=\"collapse navbar-collapse pull-left\" id=\"navbar-collapse\">
                 <ul class=\"nav navbar-nav\">
                     <li class=\"\"><a href=\"/pizza\">Pizzas <span class=\"sr-only\">(current)</span></a></li>
-                    <li class=\"\"><a href=\"/pizzapedido/cart\">Pedidos</a></li>
+                    <li class=\"\"><a href=\"/pizzapedido/cart\">Carrito</a></li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class=\"\"><a href=\"/pedido\">Pedidos</a></li>
+                    {% endif %}
                     <li><a href=\"#footer\">Contacto <span class=\"sr-only\">(current)</span></a></li>
 
                 </ul>

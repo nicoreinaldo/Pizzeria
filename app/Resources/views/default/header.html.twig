@@ -15,7 +15,10 @@
             <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class=""><a href="/pizza">Pizzas <span class="sr-only">(current)</span></a></li>
-                    <li class=""><a href="/pizzapedido/cart">Pedidos</a></li>
+                    <li class=""><a href="/pizzapedido/cart">Carrito</a></li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class=""><a href="/pedido">Pedidos</a></li>
+                    {% endif %}
                     <li><a href="#footer">Contacto <span class="sr-only">(current)</span></a></li>
 
                 </ul>

@@ -61,7 +61,7 @@ class ClienteController extends Controller
 
         return $this->render('cliente/show.html.twig', array(
             'cliente' => $cliente,
-            'delete_form' => $deleteForm->createView(),
+            // 'delete_form' => $deleteForm->createView(),
         ));
     }
 
