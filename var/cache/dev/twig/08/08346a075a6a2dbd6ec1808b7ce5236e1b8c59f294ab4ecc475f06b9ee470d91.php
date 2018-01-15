@@ -15,11 +15,11 @@ class __TwigTemplate_65ef1952f0664979dd45698f4c759b8c454b7418749fd10b44b16765178
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_849bd19da660650f52d89ce8c27a504341a4fe40cb718c681c8c7d53fd32e4bf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_849bd19da660650f52d89ce8c27a504341a4fe40cb718c681c8c7d53fd32e4bf->enter($__internal_849bd19da660650f52d89ce8c27a504341a4fe40cb718c681c8c7d53fd32e4bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Debug/Profiler/icon.svg"));
+        $__internal_af1dc37075eae3bee8a3badeb385f55fa31b3b1a701f2bb4e911c35568b70663 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_af1dc37075eae3bee8a3badeb385f55fa31b3b1a701f2bb4e911c35568b70663->enter($__internal_af1dc37075eae3bee8a3badeb385f55fa31b3b1a701f2bb4e911c35568b70663_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Debug/Profiler/icon.svg"));
 
-        $__internal_d43f8b617cbed41bbe1b9e37a3fa1396380653ff56c51a6247ef32fa8bdb3ab8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d43f8b617cbed41bbe1b9e37a3fa1396380653ff56c51a6247ef32fa8bdb3ab8->enter($__internal_d43f8b617cbed41bbe1b9e37a3fa1396380653ff56c51a6247ef32fa8bdb3ab8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Debug/Profiler/icon.svg"));
+        $__internal_a52d9ac19409f8ed33ac2893b339a624fb4e6ca060cdc06699d4f3f910ea63aa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a52d9ac19409f8ed33ac2893b339a624fb4e6ca060cdc06699d4f3f910ea63aa->enter($__internal_a52d9ac19409f8ed33ac2893b339a624fb4e6ca060cdc06699d4f3f910ea63aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Debug/Profiler/icon.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -28,10 +28,10 @@ class __TwigTemplate_65ef1952f0664979dd45698f4c759b8c454b7418749fd10b44b16765178
 </svg>
 ";
         
-        $__internal_849bd19da660650f52d89ce8c27a504341a4fe40cb718c681c8c7d53fd32e4bf->leave($__internal_849bd19da660650f52d89ce8c27a504341a4fe40cb718c681c8c7d53fd32e4bf_prof);
+        $__internal_af1dc37075eae3bee8a3badeb385f55fa31b3b1a701f2bb4e911c35568b70663->leave($__internal_af1dc37075eae3bee8a3badeb385f55fa31b3b1a701f2bb4e911c35568b70663_prof);
 
         
-        $__internal_d43f8b617cbed41bbe1b9e37a3fa1396380653ff56c51a6247ef32fa8bdb3ab8->leave($__internal_d43f8b617cbed41bbe1b9e37a3fa1396380653ff56c51a6247ef32fa8bdb3ab8_prof);
+        $__internal_a52d9ac19409f8ed33ac2893b339a624fb4e6ca060cdc06699d4f3f910ea63aa->leave($__internal_a52d9ac19409f8ed33ac2893b339a624fb4e6ca060cdc06699d4f3f910ea63aa_prof);
 
     }
 
@@ -59,6 +59,6 @@ class __TwigTemplate_65ef1952f0664979dd45698f4c759b8c454b7418749fd10b44b16765178
     <path fill=\"#AAAAAA\" d=\"M12,22.6c-5.8,0-10.5-4.7-10.5-10.5C1.5,6.3,6.2,1.5,12,1.5s10.5,4.7,10.5,10.5C22.5,17.9,17.8,22.6,12,22.6z M12,4.5c-4.2,0-7.5,3.4-7.5,7.5c0,4.2,3.4,7.5,7.5,7.5s7.5-3.4,7.5-7.5C19.5,7.9,16.2,4.5,12,4.5z\"/>
     <path fill=\"#AAAAAA\" d=\"M12,9.1c-0.8,0-1.5-0.7-1.5-1.5v-6c0-0.8,0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5v6C13.5,8.4,12.8,9.1,12,9.1zM13.5,22.4v-6c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v6c0,0.8,0.7,1.5,1.5,1.5S13.5,23.2,13.5,22.4z M23.9,12c0-0.8-0.7-1.5-1.5-1.5h-6c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h6C23.2,13.5,23.9,12.8,23.9,12z M9.1,12c0-0.8-0.7-1.5-1.5-1.5h-6c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h6C8.4,13.5,9.1,12.8,9.1,12z\"/>
 </svg>
-", "@Debug/Profiler/icon.svg", "/home/nico/pizzerianostra/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/icon.svg");
+", "@Debug/Profiler/icon.svg", "/home/manuel/symfony/Pizzeria/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/icon.svg");
     }
 }

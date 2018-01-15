@@ -32,8 +32,14 @@
 
 
     <ul>
-        <li><a href="{{ path('cliente_index') }}">Realizar Pedido</a>
-        </li>
+
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+            <li><a href="{{ path('cliente_new') }}">Realizar Pedido</a>
+            </li>
+        {% else %}
+            <a href="{{ path('fos_user_security_login') }}">Realizar pedido</a>
+        {% endif %}
         <li>
             <a href="{{ path('pizza_index') }}">Volver</a>
         </li>

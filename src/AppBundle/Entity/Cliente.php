@@ -21,12 +21,13 @@ class Cliente
      */
     private $idcliente;
 
+
+
     /**
-     * @var integer
-     *
-     * @ORM\OneToOne(targetEntity="FosUser")
+     * @ORM\OneToOne(targetEntity="User", inversedBy="Cliente")
+     * @ORM\JoinColumn(name="id_fos", referencedColumnName="id")
      */
-    private $idFos;
+    private $user;
 
     /**
      * @var string
@@ -54,30 +55,30 @@ class Cliente
         return $this->idcliente;
     }
 
-    /**
-     * Set idFos
-     *
-     * @param integer $idFos
-     *
-     * @return Cliente
-     */
-    public function setIdFos($idFos)
-    {
-        // $this->idFos = $idFos;
-        $this->add( app.user.id );
+//    /**
+//     * Set idFos
+//     *
+//     * @param integer $idFos
+//     *
+//     * @return Cliente
+//     */
+//    public function setIdFos($idFos)
+//    {
+//        // $this->idFos = $idFos;
+//        $this->add( app.user.id );
+//
+//        return $this;
+//    }
 
-        return $this;
-    }
-
-    /**
-     * Get idFos
-     *
-     * @return integer
-     */
-    public function getIdFos()
-    {
-        return $this->idFos;
-    }
+//    /**
+//     * Get idFos
+//     *
+//     * @return integer
+//     */
+//    public function getIdFos()
+//    {
+//        return $this->idFos;
+//    }
 
     /**
      * Set nombre
@@ -125,5 +126,35 @@ class Cliente
     public function getDireccion()
     {
         return $this->direccion;
+    }
+
+
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Cliente
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    public function __toString(){
+        return (string) $this->user;
     }
 }

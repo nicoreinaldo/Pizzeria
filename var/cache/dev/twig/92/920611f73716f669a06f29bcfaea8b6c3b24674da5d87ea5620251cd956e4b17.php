@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:profiler.css.twig */
+/* @WebProfiler/Profiler/profiler.css.twig */
 class __TwigTemplate_280effcee1036c9375ff67e76fab0ea1b217656cbe0d854277dbbea1f4f2dc58 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,11 +15,11 @@ class __TwigTemplate_280effcee1036c9375ff67e76fab0ea1b217656cbe0d854277dbbea1f4f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_29628d053092a3ab0f084efc7397b3bb2749f2282e8efac2587374c1785397ce = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_29628d053092a3ab0f084efc7397b3bb2749f2282e8efac2587374c1785397ce->enter($__internal_29628d053092a3ab0f084efc7397b3bb2749f2282e8efac2587374c1785397ce_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:profiler.css.twig"));
+        $__internal_bc9b650868add169611d5c40e827e8b8c42d8ea3d0e54e20f25aee80b4d17e19 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_bc9b650868add169611d5c40e827e8b8c42d8ea3d0e54e20f25aee80b4d17e19->enter($__internal_bc9b650868add169611d5c40e827e8b8c42d8ea3d0e54e20f25aee80b4d17e19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
 
-        $__internal_43ca4fd9b65c5fd154fad760f8a1effa3a5277fe30155fcdd09dcbb26142ca8b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_43ca4fd9b65c5fd154fad760f8a1effa3a5277fe30155fcdd09dcbb26142ca8b->enter($__internal_43ca4fd9b65c5fd154fad760f8a1effa3a5277fe30155fcdd09dcbb26142ca8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:profiler.css.twig"));
+        $__internal_611c106666033ae89f8c9e05de16bac2f06590d1018f38dc4da3439550b518d9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_611c106666033ae89f8c9e05de16bac2f06590d1018f38dc4da3439550b518d9->enter($__internal_611c106666033ae89f8c9e05de16bac2f06590d1018f38dc4da3439550b518d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
 
         // line 3
         $context["mixins"] = array("break_long_words" => "-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;", "monospace_font" => "font-family: monospace; font-size: 13px; font-size-adjust: 0.5;", "sans_serif_font" => "font-family: Helvetica, Arial, sans-serif;", "subtle_border_and_shadow" => "background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);");
@@ -1114,16 +1114,16 @@ tr.status-warning td {
 }
 ";
         
-        $__internal_29628d053092a3ab0f084efc7397b3bb2749f2282e8efac2587374c1785397ce->leave($__internal_29628d053092a3ab0f084efc7397b3bb2749f2282e8efac2587374c1785397ce_prof);
+        $__internal_bc9b650868add169611d5c40e827e8b8c42d8ea3d0e54e20f25aee80b4d17e19->leave($__internal_bc9b650868add169611d5c40e827e8b8c42d8ea3d0e54e20f25aee80b4d17e19_prof);
 
         
-        $__internal_43ca4fd9b65c5fd154fad760f8a1effa3a5277fe30155fcdd09dcbb26142ca8b->leave($__internal_43ca4fd9b65c5fd154fad760f8a1effa3a5277fe30155fcdd09dcbb26142ca8b_prof);
+        $__internal_611c106666033ae89f8c9e05de16bac2f06590d1018f38dc4da3439550b518d9->leave($__internal_611c106666033ae89f8c9e05de16bac2f06590d1018f38dc4da3439550b518d9_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:profiler.css.twig";
+        return "@WebProfiler/Profiler/profiler.css.twig";
     }
 
     public function isTraitable()
@@ -2165,6 +2165,6 @@ table.logs .metadata {
         margin-left: 2px;
     }
 }
-", "WebProfilerBundle:Profiler:profiler.css.twig", "/home/nico/pizzerianostra/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/profiler.css.twig");
+", "@WebProfiler/Profiler/profiler.css.twig", "/home/manuel/symfony/Pizzeria/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/profiler.css.twig");
     }
 }

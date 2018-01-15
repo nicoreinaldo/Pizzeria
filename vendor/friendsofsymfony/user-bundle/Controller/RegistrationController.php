@@ -76,8 +76,9 @@ class RegistrationController extends Controller
                 }
 
                 $dispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $request, $response));
+                return $this->redirectToRoute('cliente_new');
 
-                return $response;
+               // return $response;
             }
 
             $event = new FormEvent($form, $request);

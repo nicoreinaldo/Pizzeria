@@ -18,10 +18,47 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+    /**
+     * @ORM\OneToOne(targetEntity="Cliente", mappedBy="user")
+     */
+    private $Cliente;
+
 
     public function __construct()
     {
         parent::__construct();
         // your own logic
     }
+
+
+
+    /**
+     * Set cliente
+     *
+     * @param \AppBundle\Entity\Cliente $cliente
+     *
+     * @return User
+     */
+    public function setCliente(\AppBundle\Entity\Cliente $cliente = null)
+    {
+        $this->Cliente = $cliente;
+
+        return $this;
+    }
+
+    /**
+     * Get cliente
+     *
+     * @return \AppBundle\Entity\Cliente
+     */
+    public function getCliente()
+    {
+        return $this->Cliente;
+    }
+
+
+        public function __toString(){
+        return (string) $this->id;
+    }
+
 }

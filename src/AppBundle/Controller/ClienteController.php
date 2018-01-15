@@ -37,12 +37,14 @@ class ClienteController extends Controller
         $form = $this->createForm('AppBundle\Form\ClienteType', $cliente);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $user = $em->getRepository('AppBundle:User')->find($this->getUser()->getId());
+            $cliente->setUser($user);
             $em->persist($cliente);
             $em->flush();
-
-            return $this->redirectToRoute('pizza_index');
+            return $this->redirectToRoute('pizzapedido_cart');
         }
 
         return $this->render('cliente/new.html.twig', array(

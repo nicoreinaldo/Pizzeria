@@ -1,6 +1,6 @@
 <?php
 
-/* :default:footer.html.twig */
+/* default/footer.html.twig */
 class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085f6f96 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,11 +15,11 @@ class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_39ad6681919377c2d303b54f63b146f950c64ecd0c72d080d2f449876bf16027 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_39ad6681919377c2d303b54f63b146f950c64ecd0c72d080d2f449876bf16027->enter($__internal_39ad6681919377c2d303b54f63b146f950c64ecd0c72d080d2f449876bf16027_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:footer.html.twig"));
+        $__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f->enter($__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/footer.html.twig"));
 
-        $__internal_11d0d691d98b2fd5595070ff930fb8b16a69dd30a055c5d17a4f0ae0ce4b8c0f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_11d0d691d98b2fd5595070ff930fb8b16a69dd30a055c5d17a4f0ae0ce4b8c0f->enter($__internal_11d0d691d98b2fd5595070ff930fb8b16a69dd30a055c5d17a4f0ae0ce4b8c0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:footer.html.twig"));
+        $__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88->enter($__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/footer.html.twig"));
 
         // line 1
         echo "<footer id=\"footer\" class=\"footer\">
@@ -94,16 +94,16 @@ class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085
 \t\t\t</div>
 \t\t</div>";
         
-        $__internal_39ad6681919377c2d303b54f63b146f950c64ecd0c72d080d2f449876bf16027->leave($__internal_39ad6681919377c2d303b54f63b146f950c64ecd0c72d080d2f449876bf16027_prof);
+        $__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f->leave($__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f_prof);
 
         
-        $__internal_11d0d691d98b2fd5595070ff930fb8b16a69dd30a055c5d17a4f0ae0ce4b8c0f->leave($__internal_11d0d691d98b2fd5595070ff930fb8b16a69dd30a055c5d17a4f0ae0ce4b8c0f_prof);
+        $__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88->leave($__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88_prof);
 
     }
 
     public function getTemplateName()
     {
-        return ":default:footer.html.twig";
+        return "default/footer.html.twig";
     }
 
     public function getDebugInfo()
@@ -191,6 +191,6 @@ class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t</div>", ":default:footer.html.twig", "/home/nico/pizzerianostra/app/Resources/views/default/footer.html.twig");
+\t\t</div>", "default/footer.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/default/footer.html.twig");
     }
 }
