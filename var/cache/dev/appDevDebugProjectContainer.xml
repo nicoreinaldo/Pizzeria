@@ -15,6 +15,7 @@
       <parameter key="MonologBundle">Symfony\Bundle\MonologBundle\MonologBundle</parameter>
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
+      <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
@@ -54,6 +55,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/home/nico/pizzerianostra/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
+      </parameter>
+      <parameter key="DoctrineMigrationsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/nico/pizzerianostra/vendor/doctrine/doctrine-migrations-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -339,6 +345,12 @@
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.proxy_dir">/home/nico/pizzerianostra/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
+    <parameter key="doctrine_migrations.dir_name">/home/nico/pizzerianostra/app/DoctrineMigrations</parameter>
+    <parameter key="doctrine_migrations.namespace">Application\Migrations</parameter>
+    <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
+    <parameter key="doctrine_migrations.name">Application Migrations</parameter>
+    <parameter key="doctrine_migrations.custom_template">null</parameter>
+    <parameter key="doctrine_migrations.organize_migrations">false</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
     <parameter key="sensio_framework_extra.routing.loader.annot_dir.class">Symfony\Component\Routing\Loader\AnnotationDirectoryLoader</parameter>
@@ -490,6 +502,13 @@
       <parameter key="console.command.doctrine_bundle_doctrinebundle_command_proxy_runsqldoctrinecommand">doctrine.query_sql_command</parameter>
       <parameter key="console.command.doctrine_bundle_doctrinebundle_command_proxy_updateschemadoctrinecommand">doctrine.schema_update_command</parameter>
       <parameter key="console.command.doctrine_bundle_doctrinebundle_command_proxy_validateschemacommand">doctrine.schema_validate_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsdiffdoctrinecommand">doctrine_migrations.diff_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsexecutedoctrinecommand">doctrine_migrations.execute_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsgeneratedoctrinecommand">doctrine_migrations.generate_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationslatestdoctrinecommand">doctrine_migrations.latest_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsmigratedoctrinecommand">doctrine_migrations.migrate_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsstatusdoctrinecommand">doctrine_migrations.status_command</parameter>
+      <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsversiondoctrinecommand">doctrine_migrations.version_command</parameter>
       <parameter key="console.command.sensiolabs_security_command_securitycheckercommand">sensio_distribution.security_checker.command</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverruncommand">console.command.symfony_bundle_webserverbundle_command_serverruncommand</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverstartcommand">console.command.symfony_bundle_webserverbundle_command_serverstartcommand</parameter>
@@ -666,24 +685,6 @@
         <argument>/_fragment</argument>
       </call>
     </service>
-    <service id="fragment.renderer.esi" class="Symfony\Component\HttpKernel\Fragment\EsiFragmentRenderer">
-      <tag name="kernel.fragment_renderer" alias="esi"/>
-      <argument>null</argument>
-      <argument type="service" id="fragment.renderer.inline"/>
-      <argument type="service" id="uri_signer"/>
-      <call method="setFragmentPath">
-        <argument>/_fragment</argument>
-      </call>
-    </service>
-    <service id="fragment.renderer.ssi" class="Symfony\Component\HttpKernel\Fragment\SsiFragmentRenderer">
-      <tag name="kernel.fragment_renderer" alias="ssi"/>
-      <argument>null</argument>
-      <argument type="service" id="fragment.renderer.inline"/>
-      <argument type="service" id="uri_signer"/>
-      <call method="setFragmentPath">
-        <argument>/_fragment</argument>
-      </call>
-    </service>
     <service id="console.error_listener" class="Symfony\Component\Console\EventListener\ErrorListener" public="false">
       <tag name="kernel.event_subscriber"/>
       <tag name="monolog.logger" channel="console"/>
@@ -719,7 +720,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>AXzzjVnTvegIvFPKhuwDIz</argument>
+      <argument>90RP8RyvvH9XwiG-LzUG7D</argument>
       <argument>/home/nico/pizzerianostra/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -729,7 +730,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>AXzzjVnTvegIvFPKhuwDIz</argument>
+      <argument>90RP8RyvvH9XwiG-LzUG7D</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -2483,21 +2484,21 @@
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
-    <service id="3_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+    <service id="2_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
       <argument>/home/nico/pizzerianostra/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id="2_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
-    <service id="1_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4" class="Doctrine\Common\Annotations\AnnotationRegistry" public="false">
-      <call method="registerLoader">
-        <argument>class_exists</argument>
-      </call>
-    </service>
+    <service id="1_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
-        <argument type="service" id="1_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4"/>
+        <argument type="service" id="annotations.dummy_registry"/>
+      </call>
+    </service>
+    <service id="annotations.dummy_registry" class="Doctrine\Common\Annotations\AnnotationRegistry" public="false">
+      <call method="registerLoader">
+        <argument>class_exists</argument>
       </call>
     </service>
     <service id="annotations.filesystem_cache" class="Doctrine\Common\Cache\FilesystemCache" public="false">
@@ -2510,7 +2511,7 @@
       <argument type="service" id="cache.annotations"/>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id="3_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4"/>
+      <argument type="service" id="2_ad1dcf869b137d269720aac28815692a844f957ab041a407b2f098da7f5c4cd4"/>
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
       <argument>false</argument>
@@ -3128,12 +3129,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a543176d75c94.30471480</argument>
+      <argument>5a5bb6170388b5.23295283</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a543176d75c94.30471480</argument>
+      <argument>5a5bb6170388b5.23295283</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -4012,6 +4013,27 @@
       <tag name="property_info.type_extractor" priority="-999"/>
       <argument type="service" id="doctrine.orm.default_entity_manager.metadata_factory"/>
     </service>
+    <service id="doctrine_migrations.diff_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsDiffDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_migrations.execute_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsExecuteDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_migrations.generate_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsGenerateDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_migrations.latest_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsLatestDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_migrations.migrate_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsMigrateDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_migrations.status_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsStatusDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
+    <service id="doctrine_migrations.version_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsVersionDoctrineCommand">
+      <tag name="console.command"/>
+    </service>
     <service id="sensio_framework_extra.view.guesser" class="Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser">
       <argument type="service" id="kernel"/>
     </service>
@@ -4830,7 +4852,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>gSiS93X01M</argument>
       <argument>0</argument>
-      <argument>AXzzjVnTvegIvFPKhuwDIz</argument>
+      <argument>90RP8RyvvH9XwiG-LzUG7D</argument>
       <argument>/home/nico/pizzerianostra/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4838,7 +4860,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>LCnsdRcATz</argument>
       <argument>0</argument>
-      <argument>AXzzjVnTvegIvFPKhuwDIz</argument>
+      <argument>90RP8RyvvH9XwiG-LzUG7D</argument>
       <argument>/home/nico/pizzerianostra/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4846,7 +4868,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>V-9zUR3QvZ</argument>
       <argument>0</argument>
-      <argument>AXzzjVnTvegIvFPKhuwDIz</argument>
+      <argument>90RP8RyvvH9XwiG-LzUG7D</argument>
       <argument>/home/nico/pizzerianostra/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4854,7 +4876,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>yNh4R5G3O+</argument>
       <argument>0</argument>
-      <argument>AXzzjVnTvegIvFPKhuwDIz</argument>
+      <argument>90RP8RyvvH9XwiG-LzUG7D</argument>
       <argument>/home/nico/pizzerianostra/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

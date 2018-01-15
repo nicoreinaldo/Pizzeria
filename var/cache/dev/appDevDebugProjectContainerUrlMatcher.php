@@ -15,10 +15,10 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         $this->context = $context;
     }
 
-    public function match($pathinfo)
+    public function match($rawPathinfo)
     {
         $allow = array();
-        $pathinfo = rawurldecode($pathinfo);
+        $pathinfo = rawurldecode($rawPathinfo);
         $trimmedPathinfo = rtrim($pathinfo, '/');
         $context = $this->context;
         $request = $this->request;
@@ -40,7 +40,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // _profiler_home
                 if ('/_profiler' === $trimmedPathinfo) {
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', '_profiler_home');
+                        return $this->redirect($rawPathinfo.'/', '_profiler_home');
                     }
 
                     return array (  '_controller' => 'web_profiler.controller.profiler:homeAction',  '_route' => '_profiler_home',);
@@ -106,7 +106,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // index
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'index');
+                return $this->redirect($rawPathinfo.'/', 'index');
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'index',);
@@ -121,7 +121,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'cliente_index');
+                    return $this->redirect($rawPathinfo.'/', 'cliente_index');
                 }
 
                 return array (  '_controller' => 'AppBundle\\Controller\\ClienteController::indexAction',  '_route' => 'cliente_index',);
@@ -183,7 +183,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'estadopedido_index');
+                    return $this->redirect($rawPathinfo.'/', 'estadopedido_index');
                 }
 
                 return array (  '_controller' => 'AppBundle\\Controller\\EstadopedidoController::indexAction',  '_route' => 'estadopedido_index',);
@@ -246,7 +246,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
 
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'pedido_index');
+                        return $this->redirect($rawPathinfo.'/', 'pedido_index');
                     }
 
                     return array (  '_controller' => 'AppBundle\\Controller\\PedidoController::indexAction',  '_route' => 'pedido_index',);
@@ -308,7 +308,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
 
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'pizza_index');
+                        return $this->redirect($rawPathinfo.'/', 'pizza_index');
                     }
 
                     return array (  '_controller' => 'AppBundle\\Controller\\PizzaController::indexAction',  '_route' => 'pizza_index',);
@@ -368,7 +368,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         }
 
                         if (substr($pathinfo, -1) !== '/') {
-                            return $this->redirect($pathinfo.'/', 'pizzapedido_index');
+                            return $this->redirect($rawPathinfo.'/', 'pizzapedido_index');
                         }
 
                         return array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::indexAction',  '_route' => 'pizzapedido_index',);
@@ -453,7 +453,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
 
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'fos_user_profile_show');
+                        return $this->redirect($rawPathinfo.'/', 'fos_user_profile_show');
                     }
 
                     return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::showAction',  '_route' => 'fos_user_profile_show',);
@@ -495,7 +495,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'tamanopizza_index');
+                    return $this->redirect($rawPathinfo.'/', 'tamanopizza_index');
                 }
 
                 return array (  '_controller' => 'AppBundle\\Controller\\TamanopizzaController::indexAction',  '_route' => 'tamanopizza_index',);
@@ -593,7 +593,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'fos_user_registration_register');
+                    return $this->redirect($rawPathinfo.'/', 'fos_user_registration_register');
                 }
 
                 return array (  '_controller' => 'FOS\\UserBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'fos_user_registration_register',);

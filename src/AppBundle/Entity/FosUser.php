@@ -100,6 +100,13 @@ class FosUser
 
 
 
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+
     /**
      * Get id
      *

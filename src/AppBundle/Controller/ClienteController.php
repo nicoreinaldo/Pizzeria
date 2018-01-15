@@ -42,7 +42,7 @@ class ClienteController extends Controller
             $em->persist($cliente);
             $em->flush();
 
-            return $this->redirectToRoute('cliente_show', array('idcliente' => $cliente->getIdcliente()));
+            return $this->redirectToRoute('pizza_index');
         }
 
         return $this->render('cliente/new.html.twig', array(
@@ -61,7 +61,7 @@ class ClienteController extends Controller
 
         return $this->render('cliente/show.html.twig', array(
             'cliente' => $cliente,
-            // 'delete_form' => $deleteForm->createView(),
+            'delete_form' => $deleteForm->createView(),
         ));
     }
 

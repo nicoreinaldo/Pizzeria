@@ -22,6 +22,13 @@ class Cliente
     private $idcliente;
 
     /**
+     * @var integer
+     *
+     * @ORM\OneToOne(targetEntity="FosUser")
+     */
+    private $idFos;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="nombre", type="string", length=45, nullable=false)
@@ -45,6 +52,31 @@ class Cliente
     public function getIdcliente()
     {
         return $this->idcliente;
+    }
+
+    /**
+     * Set idFos
+     *
+     * @param integer $idFos
+     *
+     * @return Cliente
+     */
+    public function setIdFos($idFos)
+    {
+        // $this->idFos = $idFos;
+        $this->add( app.user.id );
+
+        return $this;
+    }
+
+    /**
+     * Get idFos
+     *
+     * @return integer
+     */
+    public function getIdFos()
+    {
+        return $this->idFos;
     }
 
     /**

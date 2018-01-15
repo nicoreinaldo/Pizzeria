@@ -144,6 +144,7 @@
   'WebProfilerBundle:Collector:exception.css.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/exception.css.twig',
   'WebProfilerBundle:Collector:form.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/form.html.twig',
   'WebProfilerBundle:Collector:memory.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/memory.html.twig',
+  '::baseFos.html.twig' => __DIR__.'/../../../app/Resources/views/baseFos.html.twig',
   '::base.html.twig' => __DIR__.'/../../../app/Resources/views/base.html.twig',
   ':tamanopizza:show.html.twig' => __DIR__.'/../../../app/Resources/views/tamanopizza/show.html.twig',
   ':tamanopizza:index.html.twig' => __DIR__.'/../../../app/Resources/views/tamanopizza/index.html.twig',
