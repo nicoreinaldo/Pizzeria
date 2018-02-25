@@ -23,29 +23,29 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_33df75666c30726ffc2cd900bdb1865b34dc9427271249225979367c586fc2f7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_33df75666c30726ffc2cd900bdb1865b34dc9427271249225979367c586fc2f7->enter($__internal_33df75666c30726ffc2cd900bdb1865b34dc9427271249225979367c586fc2f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizza/index.html.twig"));
+        $__internal_2fe21a2dae84c93cd85326ba425df4c6ac6e6591dc78796001c1ae4efa166a0c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2fe21a2dae84c93cd85326ba425df4c6ac6e6591dc78796001c1ae4efa166a0c->enter($__internal_2fe21a2dae84c93cd85326ba425df4c6ac6e6591dc78796001c1ae4efa166a0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizza/index.html.twig"));
 
-        $__internal_6e985815be30e439f054d4b8a1559f55eeb75ba713f70ccb1ae90c51e6bfa2d8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6e985815be30e439f054d4b8a1559f55eeb75ba713f70ccb1ae90c51e6bfa2d8->enter($__internal_6e985815be30e439f054d4b8a1559f55eeb75ba713f70ccb1ae90c51e6bfa2d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizza/index.html.twig"));
+        $__internal_1a23e06252680eb9e6f4b61b81add43f04179670e61cb34e9fe8bf4217743f8b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1a23e06252680eb9e6f4b61b81add43f04179670e61cb34e9fe8bf4217743f8b->enter($__internal_1a23e06252680eb9e6f4b61b81add43f04179670e61cb34e9fe8bf4217743f8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizza/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_33df75666c30726ffc2cd900bdb1865b34dc9427271249225979367c586fc2f7->leave($__internal_33df75666c30726ffc2cd900bdb1865b34dc9427271249225979367c586fc2f7_prof);
+        $__internal_2fe21a2dae84c93cd85326ba425df4c6ac6e6591dc78796001c1ae4efa166a0c->leave($__internal_2fe21a2dae84c93cd85326ba425df4c6ac6e6591dc78796001c1ae4efa166a0c_prof);
 
         
-        $__internal_6e985815be30e439f054d4b8a1559f55eeb75ba713f70ccb1ae90c51e6bfa2d8->leave($__internal_6e985815be30e439f054d4b8a1559f55eeb75ba713f70ccb1ae90c51e6bfa2d8_prof);
+        $__internal_1a23e06252680eb9e6f4b61b81add43f04179670e61cb34e9fe8bf4217743f8b->leave($__internal_1a23e06252680eb9e6f4b61b81add43f04179670e61cb34e9fe8bf4217743f8b_prof);
 
     }
 
     // line 3
     public function block_styleshetts($context, array $blocks = array())
     {
-        $__internal_55cf0aa37ca3a87f71b26b19ec40e0b3d35a41c747d4c609c9162a48a68152b5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_55cf0aa37ca3a87f71b26b19ec40e0b3d35a41c747d4c609c9162a48a68152b5->enter($__internal_55cf0aa37ca3a87f71b26b19ec40e0b3d35a41c747d4c609c9162a48a68152b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
+        $__internal_4c4ac40b79d83f42bfc39812fca44c2cbfde32b210d6b55baa03eec9f425799c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4c4ac40b79d83f42bfc39812fca44c2cbfde32b210d6b55baa03eec9f425799c->enter($__internal_4c4ac40b79d83f42bfc39812fca44c2cbfde32b210d6b55baa03eec9f425799c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
 
-        $__internal_038c6952402e98d58903302d625f638acf5df509837554aad82c6c3b7d52b2b6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_038c6952402e98d58903302d625f638acf5df509837554aad82c6c3b7d52b2b6->enter($__internal_038c6952402e98d58903302d625f638acf5df509837554aad82c6c3b7d52b2b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
+        $__internal_c5f15d8e3f0db97df1fcf55061f3769813464fd28252ed1dba2683e73f7dbe6e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c5f15d8e3f0db97df1fcf55061f3769813464fd28252ed1dba2683e73f7dbe6e->enter($__internal_c5f15d8e3f0db97df1fcf55061f3769813464fd28252ed1dba2683e73f7dbe6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "styleshetts"));
 
         // line 4
         echo "    ";
@@ -56,46 +56,48 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
 
 ";
         
-        $__internal_038c6952402e98d58903302d625f638acf5df509837554aad82c6c3b7d52b2b6->leave($__internal_038c6952402e98d58903302d625f638acf5df509837554aad82c6c3b7d52b2b6_prof);
+        $__internal_c5f15d8e3f0db97df1fcf55061f3769813464fd28252ed1dba2683e73f7dbe6e->leave($__internal_c5f15d8e3f0db97df1fcf55061f3769813464fd28252ed1dba2683e73f7dbe6e_prof);
 
         
-        $__internal_55cf0aa37ca3a87f71b26b19ec40e0b3d35a41c747d4c609c9162a48a68152b5->leave($__internal_55cf0aa37ca3a87f71b26b19ec40e0b3d35a41c747d4c609c9162a48a68152b5_prof);
+        $__internal_4c4ac40b79d83f42bfc39812fca44c2cbfde32b210d6b55baa03eec9f425799c->leave($__internal_4c4ac40b79d83f42bfc39812fca44c2cbfde32b210d6b55baa03eec9f425799c_prof);
 
     }
 
-    // line 9
+    // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cc36d0887a4b93b8b048327313f7c5e71a04ce05b6b2e0ff0f0039e4d2c41b33 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_cc36d0887a4b93b8b048327313f7c5e71a04ce05b6b2e0ff0f0039e4d2c41b33->enter($__internal_cc36d0887a4b93b8b048327313f7c5e71a04ce05b6b2e0ff0f0039e4d2c41b33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_724c1a86f8a1b2c363d6e9e54396a12fc32c8a7ea20436e8671c59ddd5fed542 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_724c1a86f8a1b2c363d6e9e54396a12fc32c8a7ea20436e8671c59ddd5fed542->enter($__internal_724c1a86f8a1b2c363d6e9e54396a12fc32c8a7ea20436e8671c59ddd5fed542_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_7eb47b524fe60009d67a20ca26511ba6042276ad0ef354546b2e97ca09dadf8e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7eb47b524fe60009d67a20ca26511ba6042276ad0ef354546b2e97ca09dadf8e->enter($__internal_7eb47b524fe60009d67a20ca26511ba6042276ad0ef354546b2e97ca09dadf8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_40dbf7295aa2d531fec4c27ecb2887809e6f302dd5ed8a544345fc58abf6beb1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_40dbf7295aa2d531fec4c27ecb2887809e6f302dd5ed8a544345fc58abf6beb1->enter($__internal_40dbf7295aa2d531fec4c27ecb2887809e6f302dd5ed8a544345fc58abf6beb1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 10
+        // line 11
         echo "
     <section class=\"content-header\">
         <h1> Pizzas
             <small>Menu con todas las variedades de pizzas disponibles</small>
         </h1>
+        <div id = \"alert_placeholder\"> </div>
+        <div id = \"alerta\"> </div>
         <ol class=\"breadcrumb\">
             <div class=\"margin pull-right\">
                 ";
-        // line 17
+        // line 20
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 18
+            // line 21
             echo "                    <div class=\"btn-group\">
                         <a href=\"";
-            // line 19
+            // line 22
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizza_new");
             echo "\" class=\"btn btn-success\">Agregar variedad de Pizza</a>
                     </div>
                 ";
         }
-        // line 22
+        // line 25
         echo "                <div class=\"btn-group\">
                     <a href=\"";
-        // line 23
+        // line 26
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizzapedido_cart");
         echo "\" class=\"btn btn-danger\">Ver Carrito</a>
                 </div>
@@ -115,46 +117,58 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
                                     <div class=\"tab-1 resp-tab-content\">
 
                                         ";
-        // line 40
+        // line 43
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["pizzas"] ?? $this->getContext($context, "pizzas")));
         foreach ($context['_seq'] as $context["_key"] => $context["pizza"]) {
-            // line 41
+            // line 44
             echo "                                        <tr>
                                             <div class=\"col-md-4 portfolio-grids\">
                                                 <div class=\"sc-product-item thumbnail\">
                                                     <div class=\"caption\">
                                                         <h4 data-name=\"product_name\">";
-            // line 45
+            // line 48
             echo twig_escape_filter($this->env, $this->getAttribute($context["pizza"], "nombre", array()), "html", null, true);
             echo "</h4>
                                                         <p data-name=\"product_desc\">";
-            // line 46
+            // line 49
             echo twig_escape_filter($this->env, $this->getAttribute($context["pizza"], "descripcion", array()), "html", null, true);
             echo "</p>
                                                         <hr class=\"line\">
                                                         <div>
                                                             <h4 class=\"price pull-left espacio\">\$";
-            // line 49
+            // line 52
             echo twig_escape_filter($this->env, $this->getAttribute($context["pizza"], "precio", array()), "html", null, true);
             echo "</h4>
                                                             ";
-            // line 50
+            // line 53
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-                // line 51
+                // line 54
                 echo "                                                                <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizza_show", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
                 echo "\" class=\"btn btn-primary\" >Ver</a>
                                                                 <a href=\"";
-                // line 52
+                // line 55
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizza_edit", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
                 echo "\" class=\"btn btn-primary\">Editar</a>
                                                             ";
             }
-            // line 54
-            echo "                                                            <a class=\"sc-add-to-cart btn btn-success btn-sm pull-right\" href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizzapedido_agregar_pizza", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
-            echo "\" class=\"btn btn-primary\" >Agregar al carrito</a>
+            // line 57
+            echo "                                                            ";
+            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_FULLY")) {
+                // line 58
+                echo "                                                                <a type=\"button\"  id = \"click\" class=\"sc-add-to-cart btn btn-success btn-sm pull-right\"  href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizzapedido_agregar_pizza", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
+                echo "\"  >Agregar al Carrito</a>
+                                                            ";
+            } else {
+                // line 60
+                echo "                                                                <input type=\"button\" value=\"Agregar al Carrito\" id = \"clickme\" Class=\" btn btn-success btn-sm pull-right\"   class=\"btn btn-primary\" > </a>
+                                                            
+                                                            ";
+            }
+            // line 63
+            echo "                                                            
                                                         </div>
                                                         <div class=\"clearfix\"></div>
                                                     </div>
@@ -167,39 +181,64 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pizza'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 72
         echo "                                </div>
                             </div>
     </section>
 
 ";
         
-        $__internal_7eb47b524fe60009d67a20ca26511ba6042276ad0ef354546b2e97ca09dadf8e->leave($__internal_7eb47b524fe60009d67a20ca26511ba6042276ad0ef354546b2e97ca09dadf8e_prof);
+        $__internal_40dbf7295aa2d531fec4c27ecb2887809e6f302dd5ed8a544345fc58abf6beb1->leave($__internal_40dbf7295aa2d531fec4c27ecb2887809e6f302dd5ed8a544345fc58abf6beb1_prof);
 
         
-        $__internal_cc36d0887a4b93b8b048327313f7c5e71a04ce05b6b2e0ff0f0039e4d2c41b33->leave($__internal_cc36d0887a4b93b8b048327313f7c5e71a04ce05b6b2e0ff0f0039e4d2c41b33_prof);
+        $__internal_724c1a86f8a1b2c363d6e9e54396a12fc32c8a7ea20436e8671c59ddd5fed542->leave($__internal_724c1a86f8a1b2c363d6e9e54396a12fc32c8a7ea20436e8671c59ddd5fed542_prof);
 
     }
 
-    // line 69
+    // line 78
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_da289b80e072d8a9466b9d01911b4c542c8ed3792a2fd76f8031d3f6094b5d38 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_da289b80e072d8a9466b9d01911b4c542c8ed3792a2fd76f8031d3f6094b5d38->enter($__internal_da289b80e072d8a9466b9d01911b4c542c8ed3792a2fd76f8031d3f6094b5d38_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_7d012de3c2751a4250884c85ba4878a246323d4b90ddbd8feccc152279f47d8b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7d012de3c2751a4250884c85ba4878a246323d4b90ddbd8feccc152279f47d8b->enter($__internal_7d012de3c2751a4250884c85ba4878a246323d4b90ddbd8feccc152279f47d8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_a9a5ee3a55ff3e4f3a5ef4823e9a45fa69d3f2ba50da454f1a25dd11bba259df = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a9a5ee3a55ff3e4f3a5ef4823e9a45fa69d3f2ba50da454f1a25dd11bba259df->enter($__internal_a9a5ee3a55ff3e4f3a5ef4823e9a45fa69d3f2ba50da454f1a25dd11bba259df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_fefaa4abfceba57b3da884ae90f9c31633751b982ebc4ca04640dcc865a2de32 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fefaa4abfceba57b3da884ae90f9c31633751b982ebc4ca04640dcc865a2de32->enter($__internal_fefaa4abfceba57b3da884ae90f9c31633751b982ebc4ca04640dcc865a2de32_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 70
+        // line 79
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>
+    <script>
+        bootstrap_alert = function() {}
+        bootstrap_alert.warning = function(message) {
+                    \$('#alert_placeholder').html('<div class=\"alert alert-danger fade in\"><a class=\"close\" data-dismiss=\"alert\">×</a><span>'+message+'</span></div>')
+                }
+
+        \$('#clickme').on('click', function() {
+                    bootstrap_alert.warning('Inisiar Sesion para realizar un pedido');
+        });
+
+    </script>
+        <script>
+        bootstrap_alert = function() {}
+        bootstrap_alert.success = function(message) {
+                    \$('#alerta').html('<div class=\"alert alert-success fade in\"><a class=\"close\" data-dismiss=\"alert\">×</a><span>'+message+'</span></div>')
+                }
+
+                    \$('#click').on('click', function() {
+                    bootstrap_alert.success('Pizza Agregada al carrito');
+        });
+
+    </script>
+
+    </script>
 ";
         
-        $__internal_a9a5ee3a55ff3e4f3a5ef4823e9a45fa69d3f2ba50da454f1a25dd11bba259df->leave($__internal_a9a5ee3a55ff3e4f3a5ef4823e9a45fa69d3f2ba50da454f1a25dd11bba259df_prof);
+        $__internal_fefaa4abfceba57b3da884ae90f9c31633751b982ebc4ca04640dcc865a2de32->leave($__internal_fefaa4abfceba57b3da884ae90f9c31633751b982ebc4ca04640dcc865a2de32_prof);
 
         
-        $__internal_da289b80e072d8a9466b9d01911b4c542c8ed3792a2fd76f8031d3f6094b5d38->leave($__internal_da289b80e072d8a9466b9d01911b4c542c8ed3792a2fd76f8031d3f6094b5d38_prof);
+        $__internal_7d012de3c2751a4250884c85ba4878a246323d4b90ddbd8feccc152279f47d8b->leave($__internal_7d012de3c2751a4250884c85ba4878a246323d4b90ddbd8feccc152279f47d8b_prof);
 
     }
 
@@ -215,7 +254,7 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
 
     public function getDebugInfo()
     {
-        return array (  194 => 70,  185 => 69,  171 => 63,  155 => 54,  150 => 52,  145 => 51,  143 => 50,  139 => 49,  133 => 46,  129 => 45,  123 => 41,  119 => 40,  99 => 23,  96 => 22,  90 => 19,  87 => 18,  85 => 17,  76 => 10,  67 => 9,  53 => 5,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  208 => 79,  199 => 78,  185 => 72,  171 => 63,  166 => 60,  160 => 58,  157 => 57,  152 => 55,  147 => 54,  145 => 53,  141 => 52,  135 => 49,  131 => 48,  125 => 44,  121 => 43,  101 => 26,  98 => 25,  92 => 22,  89 => 21,  87 => 20,  76 => 11,  67 => 10,  53 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -236,12 +275,15 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
 
 {% endblock %}
 
+
 {% block body %}
 
     <section class=\"content-header\">
         <h1> Pizzas
             <small>Menu con todas las variedades de pizzas disponibles</small>
         </h1>
+        <div id = \"alert_placeholder\"> </div>
+        <div id = \"alerta\"> </div>
         <ol class=\"breadcrumb\">
             <div class=\"margin pull-right\">
                 {% if is_granted('ROLE_ADMIN') %}
@@ -281,7 +323,13 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
                                                                 <a href=\"{{ path('pizza_show', { 'idpizza': pizza.idpizza }) }}\" class=\"btn btn-primary\" >Ver</a>
                                                                 <a href=\"{{ path('pizza_edit', { 'idpizza': pizza.idpizza }) }}\" class=\"btn btn-primary\">Editar</a>
                                                             {% endif %}
-                                                            <a class=\"sc-add-to-cart btn btn-success btn-sm pull-right\" href=\"{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}\" class=\"btn btn-primary\" >Agregar al carrito</a>
+                                                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                                                <a type=\"button\"  id = \"click\" class=\"sc-add-to-cart btn btn-success btn-sm pull-right\"  href=\"{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}\"  >Agregar al Carrito</a>
+                                                            {% else %}
+                                                                <input type=\"button\" value=\"Agregar al Carrito\" id = \"clickme\" Class=\" btn btn-success btn-sm pull-right\"   class=\"btn btn-primary\" > </a>
+                                                            
+                                                            {% endif %}
+                                                            
                                                         </div>
                                                         <div class=\"clearfix\"></div>
                                                     </div>
@@ -298,7 +346,32 @@ class __TwigTemplate_e0ac6fc6d241e980145a62d0be52f506f06d84433d322dca600faebae47
 
 {% block javascripts %}
     {{ parent() }}
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>
+    <script>
+        bootstrap_alert = function() {}
+        bootstrap_alert.warning = function(message) {
+                    \$('#alert_placeholder').html('<div class=\"alert alert-danger fade in\"><a class=\"close\" data-dismiss=\"alert\">×</a><span>'+message+'</span></div>')
+                }
+
+        \$('#clickme').on('click', function() {
+                    bootstrap_alert.warning('Inisiar Sesion para realizar un pedido');
+        });
+
+    </script>
+        <script>
+        bootstrap_alert = function() {}
+        bootstrap_alert.success = function(message) {
+                    \$('#alerta').html('<div class=\"alert alert-success fade in\"><a class=\"close\" data-dismiss=\"alert\">×</a><span>'+message+'</span></div>')
+                }
+
+                    \$('#click').on('click', function() {
+                    bootstrap_alert.success('Pizza Agregada al carrito');
+        });
+
+    </script>
+
+    </script>
 {% endblock %}
-", "pizza/index.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/pizza/index.html.twig");
+", "pizza/index.html.twig", "/home/nico/pizzeria/app/Resources/views/pizza/index.html.twig");
     }
 }

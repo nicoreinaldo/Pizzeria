@@ -15,11 +15,11 @@ class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f->enter($__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/footer.html.twig"));
+        $__internal_d176ef22ed7d213bd1a479ff68a2c31a5ccf939ec52e0cccbadd143ee6bb84f2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d176ef22ed7d213bd1a479ff68a2c31a5ccf939ec52e0cccbadd143ee6bb84f2->enter($__internal_d176ef22ed7d213bd1a479ff68a2c31a5ccf939ec52e0cccbadd143ee6bb84f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/footer.html.twig"));
 
-        $__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88->enter($__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/footer.html.twig"));
+        $__internal_a43263cbaa47a98e7b101c6563792feb26ffa55ec41af4d060b055b5139d609b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a43263cbaa47a98e7b101c6563792feb26ffa55ec41af4d060b055b5139d609b->enter($__internal_a43263cbaa47a98e7b101c6563792feb26ffa55ec41af4d060b055b5139d609b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/footer.html.twig"));
 
         // line 1
         echo "<footer id=\"footer\" class=\"footer\">
@@ -94,10 +94,10 @@ class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085
 \t\t\t</div>
 \t\t</div>";
         
-        $__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f->leave($__internal_5d16a77a24a73825561c298deba42081a58a6ae51912356eb4f9aedd6983693f_prof);
+        $__internal_d176ef22ed7d213bd1a479ff68a2c31a5ccf939ec52e0cccbadd143ee6bb84f2->leave($__internal_d176ef22ed7d213bd1a479ff68a2c31a5ccf939ec52e0cccbadd143ee6bb84f2_prof);
 
         
-        $__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88->leave($__internal_097da880541f45c78d1f6932185ac88ee3f87990f06e68ca1f6b49833386ff88_prof);
+        $__internal_a43263cbaa47a98e7b101c6563792feb26ffa55ec41af4d060b055b5139d609b->leave($__internal_a43263cbaa47a98e7b101c6563792feb26ffa55ec41af4d060b055b5139d609b_prof);
 
     }
 
@@ -191,6 +191,6 @@ class __TwigTemplate_20fdbfb091a48e958d90c17f4157f6fb3cf61aa3c0309e9b7b591299085
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t</div>", "default/footer.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/default/footer.html.twig");
+\t\t</div>", "default/footer.html.twig", "/home/nico/pizzeria/app/Resources/views/default/footer.html.twig");
     }
 }

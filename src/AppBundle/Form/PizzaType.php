@@ -20,10 +20,6 @@ class PizzaType extends AbstractType
     {
         $builder->add('nombre')
             ->add('precio',NumberType::class)
-//            ->add('idTamanoPizza',EntityType::class,array(
-//                "class" => "AppBundle:Tamanopizza",
-//                'choice_label' => 'nombre',
-//                'expanded' => true))
             ->add('descripcion',TextType::class);
 
     }

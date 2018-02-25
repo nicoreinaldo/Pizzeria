@@ -25,3 +25,4 @@ app_pizzapedido:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

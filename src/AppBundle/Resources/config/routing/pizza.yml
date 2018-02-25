@@ -22,3 +22,8 @@ pizza_delete:
     path:     /{idpizza}/delete
     defaults: { _controller: "AppBundle:Pizza:delete" }
     methods:  DELETE
+
+pizza_inicio:
+    path:     /
+    defaults: { _controller: "AppBundle:Default:index" }
+    methods:  GET

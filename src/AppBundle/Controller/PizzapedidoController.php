@@ -136,6 +136,7 @@ class PizzapedidoController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
         $pizza_repo = $em->getRepository("AppBundle:Pizza");
         $pizzaNueva = $pizza_repo->find($idpizza);
+          echo "<script>jQuery(function(){swal(\"¡Bien!\", \"Condición cumplida\", \"success\");});</script>";
         if ($this->session->has("cart")) {
             $cart=$this->session->get('cart');
             foreach ($cart as $pizza) {
@@ -145,6 +146,27 @@ class PizzapedidoController extends Controller
         $array[]=$pizzaNueva;
         $this->session->set('cart', $array);
         return $this->redirectToRoute('pizza_index');
+    }
+
+
+    public function eliminarPizzaArrayAction ($idpizza){
+        $em = $this->getDoctrine()->getEntityManager();
+        $pizza_repo = $em->getRepository("AppBundle:Pizza");
+        $pizzaNueva = $pizza_repo->find($idpizza);
+        $carrito = $_SESSION['carrito'];
+
+        if ($this->session->has("cart")) {
+            $cart=$this->session->get('cart');
+            foreach ($cart as $pizza) {
+                $array[]=$pizza;
+            }
+        }
+        $array[]=$pizzaNueva;
+        $this->session->unset('cart', $array);
+        eliminarPizzaArrayAction($_SESSION['cart'], $idpizza);
+        
+        return $this->render('pizzapedido/cart.html.twig', array(
+            'cart' => $cart));
     }
 
     public function confirmaPedidoAction(){

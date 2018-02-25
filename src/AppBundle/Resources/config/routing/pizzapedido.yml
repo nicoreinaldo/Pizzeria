@@ -19,8 +19,8 @@ pizzapedido_edit:
     methods:  [GET, POST]
 
 pizzapedido_delete:
-    path:     /{idpizzapedido}/delete
-    defaults: { _controller: "AppBundle:Pizzapedido:delete" }
+    path:     /{idpizza}/delete
+    defaults: { _controller: "AppBundle:Pizzapedido:deletePizzaArray" }
     methods:  DELETE
 
 

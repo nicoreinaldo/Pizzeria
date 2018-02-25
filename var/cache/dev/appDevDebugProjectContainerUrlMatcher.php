@@ -103,13 +103,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // index
+        // 
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($rawPathinfo.'/', 'index');
+                return $this->redirect($rawPathinfo.'/', '');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'index',);
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => '',);
         }
 
         if (0 === strpos($pathinfo, '/cliente')) {
@@ -359,6 +359,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_pizza_delete:
 
+                // pizza_inicio
+                if ('/pizza' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_pizza_inicio;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'pizza_inicio');
+                    }
+
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pizza_inicio',);
+                }
+                not_pizza_inicio:
+
                 if (0 === strpos($pathinfo, '/pizzapedido')) {
                     // pizzapedido_index
                     if ('/pizzapedido' === $trimmedPathinfo) {
@@ -409,13 +424,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     not_pizzapedido_edit:
 
                     // pizzapedido_delete
-                    if (preg_match('#^/pizzapedido/(?P<idpizzapedido>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (preg_match('#^/pizzapedido/(?P<idpizza>[^/]++)/delete$#s', $pathinfo, $matches)) {
                         if ('DELETE' !== $canonicalMethod) {
                             $allow[] = 'DELETE';
                             goto not_pizzapedido_delete;
                         }
 
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::deleteAction',));
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'pizzapedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\PizzapedidoController::deletePizzaArrayAction',));
                     }
                     not_pizzapedido_delete:
 

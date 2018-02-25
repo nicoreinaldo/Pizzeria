@@ -6,6 +6,7 @@ use AppBundle\Entity\Cliente;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+
 /**
  * Cliente controller.
  *
@@ -37,16 +38,14 @@ class ClienteController extends Controller
         $form = $this->createForm('AppBundle\Form\ClienteType', $cliente);
         $form->handleRequest($request);
 
-
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $user = $em->getRepository('AppBundle:User')->find($this->getUser()->getId());
             $cliente->setUser($user);
             $em->persist($cliente);
             $em->flush();
-            return $this->redirectToRoute('pizzapedido_cart');
+            return $this->redirect('http://127.0.0.1:8000');
         }
-
         return $this->render('cliente/new.html.twig', array(
             'cliente' => $cliente,
             'form' => $form->createView(),

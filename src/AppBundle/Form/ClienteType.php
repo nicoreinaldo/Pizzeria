@@ -14,8 +14,9 @@ class ClienteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')->add('direccion')->add('user',HiddenType::class, array(
-            'data' => 'abcdef'));
+        $builder->add('nombre')->add('direccion');
+        // ->add('user',HiddenType::class, array(
+        //     'data' => 'abcdef'))
     }/**
      * {@inheritdoc}
      */

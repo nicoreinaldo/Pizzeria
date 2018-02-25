@@ -22,6 +22,12 @@
                 <td> {{ pizza.descripcion }}</td>
 
                 <td> {{ pizza.precio }}</td>
+
+                <td>
+                    <button type="button" class="btn btn-danger" href="{{ path('pizzapedido_delete', { 'idpizza': pizza.idpizza }) }}">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </td>
             </tr>
             </div>
         </div>

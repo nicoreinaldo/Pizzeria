@@ -6,12 +6,15 @@
 
 {% endblock %}
 
+
 {% block body %}
 
     <section class="content-header">
         <h1> Pizzas
             <small>Menu con todas las variedades de pizzas disponibles</small>
         </h1>
+        <div id = "alert_placeholder"> </div>
+        <div id = "alerta"> </div>
         <ol class="breadcrumb">
             <div class="margin pull-right">
                 {% if is_granted('ROLE_ADMIN') %}
@@ -51,7 +54,13 @@
                                                                 <a href="{{ path('pizza_show', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Ver</a>
                                                                 <a href="{{ path('pizza_edit', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary">Editar</a>
                                                             {% endif %}
-                                                            <a class="sc-add-to-cart btn btn-success btn-sm pull-right" href="{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}" class="btn btn-primary" >Agregar al carrito</a>
+                                                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                                                <a type="button"  id = "click" class="sc-add-to-cart btn btn-success btn-sm pull-right"  href="{{ path('pizzapedido_agregar_pizza', { 'idpizza': pizza.idpizza }) }}"  >Agregar al Carrito</a>
+                                                            {% else %}
+                                                                <input type="button" value="Agregar al Carrito" id = "clickme" Class=" btn btn-success btn-sm pull-right"   class="btn btn-primary" > </a>
+                                                            
+                                                            {% endif %}
+                                                            
                                                         </div>
                                                         <div class="clearfix"></div>
                                                     </div>
@@ -68,4 +77,29 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        bootstrap_alert = function() {}
+        bootstrap_alert.warning = function(message) {
+                    $('#alert_placeholder').html('<div class="alert alert-danger fade in"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+                }
+
+        $('#clickme').on('click', function() {
+                    bootstrap_alert.warning('Inisiar Sesion para realizar un pedido');
+        });
+
+    </script>
+        <script>
+        bootstrap_alert = function() {}
+        bootstrap_alert.success = function(message) {
+                    $('#alerta').html('<div class="alert alert-success fade in"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+                }
+
+                    $('#click').on('click', function() {
+                    bootstrap_alert.success('Pizza Agregada al carrito');
+        });
+
+    </script>
+
+    </script>
 {% endblock %}
