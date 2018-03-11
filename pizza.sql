@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-12-2017 a las 20:09:27
--- Versión del servidor: 5.7.20-0ubuntu0.16.04.1
+-- Tiempo de generación: 11-03-2018 a las 12:48:52
+-- Versión del servidor: 5.7.21-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bdpizza`
+-- Base de datos: `pizza`
 --
 
 -- --------------------------------------------------------
@@ -27,17 +27,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Cliente` (
+  `id_fos` int(11) DEFAULT NULL,
   `idCliente` int(11) NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  `direccion` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `Cliente`
 --
 
-INSERT INTO `Cliente` (`idCliente`, `nombre`, `direccion`) VALUES
-(1, 'Julian', 'adasd845');
+INSERT INTO `Cliente` (`id_fos`, `idCliente`, `nombre`, `direccion`) VALUES
+(2, 1, 'nicolas', 'psj stephenson 2851'),
+(8, 30, 'Juli', 'puerredon 111');
 
 -- --------------------------------------------------------
 
@@ -47,8 +49,15 @@ INSERT INTO `Cliente` (`idCliente`, `nombre`, `direccion`) VALUES
 
 CREATE TABLE `EstadoPedido` (
   `idEstadoPedido` int(11) NOT NULL,
-  `nombre` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `EstadoPedido`
+--
+
+INSERT INTO `EstadoPedido` (`idEstadoPedido`, `nombre`) VALUES
+(1, 'proceso');
 
 -- --------------------------------------------------------
 
@@ -76,8 +85,18 @@ CREATE TABLE `fos_user` (
 --
 
 INSERT INTO `fos_user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`) VALUES
-(2, 'soj4', 'soj4', 'nicoreinaldo@hotmail.com', 'nicoreinaldo@hotmail.com', 1, NULL, '$2y$13$23b13PLGKdgfk1X98MoVL.5u/ZXL4d1ijlcRquOkD79mYXMvot59e', '2017-12-27 19:49:43', NULL, NULL, 'a:1:{i:0;s:10:"ROLE_ADMIN";}'),
-(3, 'nico', 'nico', 'nico@hotmail.com', 'nico@hotmail.com', 1, NULL, '$2y$13$Zdup1X7xp.cqrAmPW97B/eLl8aCxzUtiaOQX9kp03CfIB5AvysB/e', '2017-12-26 21:07:07', NULL, NULL, 'a:0:{}');
+(2, 'nico', 'nico', 'nicoreinaldo@hotmail.com', 'nicoreinaldo@hotmail.com', 1, NULL, '$2y$13$r6u3fy0RnYj5Tned748BS..xyRO3jfMp4IkUzlqTyHL3lR590w3t6', '2018-03-10 18:08:12', NULL, NULL, 'a:1:{i:0;s:10:"ROLE_ADMIN";}'),
+(8, 'Juli', 'juli', 'julian@hotmail.com', 'julian@hotmail.com', 1, NULL, '$2y$13$DIzxVEIv2BA33ClQrcITOeB9uxyMDFBQqqYmmSaTL0utpUY5LBH9u', '2018-03-10 19:39:32', NULL, NULL, 'a:0:{}');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `migration_versions`
+--
+
+CREATE TABLE `migration_versions` (
+  `version` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -90,14 +109,16 @@ CREATE TABLE `Pedido` (
   `idCliente` int(11) DEFAULT NULL,
   `idEstadoPedido` int(11) DEFAULT NULL,
   `fecha` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `Pedido`
 --
 
 INSERT INTO `Pedido` (`idPedido`, `idCliente`, `idEstadoPedido`, `fecha`) VALUES
-(1, NULL, NULL, '2017-11-14');
+(1, 1, 1, '2018-02-25'),
+(2, 2, 2, '2018-02-25'),
+(3, 2, 2, '2018-02-25');
 
 -- --------------------------------------------------------
 
@@ -108,18 +129,17 @@ INSERT INTO `Pedido` (`idPedido`, `idCliente`, `idEstadoPedido`, `fecha`) VALUES
 CREATE TABLE `Pizza` (
   `idPizza` int(11) NOT NULL,
   `idTamanoPizza` int(11) DEFAULT NULL,
-  `nombre` varchar(45) NOT NULL,
-  `precio` varchar(45) NOT NULL,
-  `descripcion` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `precio` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `Pizza`
 --
 
 INSERT INTO `Pizza` (`idPizza`, `idTamanoPizza`, `nombre`, `precio`, `descripcion`) VALUES
-(1, 1, 'Muza', '45', 'asd'),
-(2, 1, 'Muza2', '99', 'Muza 22222');
+(1, NULL, 'Muzzarella', '110', 'Queso Muzarella');
 
 -- --------------------------------------------------------
 
@@ -131,7 +151,14 @@ CREATE TABLE `PizzaPedido` (
   `idPizzaPedido` int(11) NOT NULL,
   `idPizza` int(11) DEFAULT NULL,
   `idPedido` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `PizzaPedido`
+--
+
+INSERT INTO `PizzaPedido` (`idPizzaPedido`, `idPizza`, `idPedido`) VALUES
+(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -141,16 +168,18 @@ CREATE TABLE `PizzaPedido` (
 
 CREATE TABLE `TamanoPizza` (
   `idTamanoPizza` int(11) NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  `cantPorciones` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `cantPorciones` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `TamanoPizza`
 --
 
 INSERT INTO `TamanoPizza` (`idTamanoPizza`, `nombre`, `cantPorciones`) VALUES
-(1, 'grande', 8);
+(1, 'grande', 12),
+(2, 'media', 6),
+(3, 'chica', 1);
 
 --
 -- Índices para tablas volcadas
@@ -160,7 +189,8 @@ INSERT INTO `TamanoPizza` (`idTamanoPizza`, `nombre`, `cantPorciones`) VALUES
 -- Indices de la tabla `Cliente`
 --
 ALTER TABLE `Cliente`
-  ADD PRIMARY KEY (`idCliente`);
+  ADD PRIMARY KEY (`idCliente`),
+  ADD UNIQUE KEY `UNIQ_3BA1A2B96D6D134` (`id_fos`);
 
 --
 -- Indices de la tabla `EstadoPedido`
@@ -176,6 +206,12 @@ ALTER TABLE `fos_user`
   ADD UNIQUE KEY `UNIQ_957A647992FC23A8` (`username_canonical`),
   ADD UNIQUE KEY `UNIQ_957A6479A0D96FBF` (`email_canonical`),
   ADD UNIQUE KEY `UNIQ_957A6479C05FB297` (`confirmation_token`);
+
+--
+-- Indices de la tabla `migration_versions`
+--
+ALTER TABLE `migration_versions`
+  ADD PRIMARY KEY (`version`);
 
 --
 -- Indices de la tabla `Pedido`
@@ -214,37 +250,47 @@ ALTER TABLE `TamanoPizza`
 -- AUTO_INCREMENT de la tabla `Cliente`
 --
 ALTER TABLE `Cliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `EstadoPedido`
 --
 ALTER TABLE `EstadoPedido`
-  MODIFY `idEstadoPedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEstadoPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `fos_user`
 --
 ALTER TABLE `fos_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `Pedido`
 --
 ALTER TABLE `Pedido`
-  MODIFY `idPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `Pizza`
 --
 ALTER TABLE `Pizza`
-  MODIFY `idPizza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idPizza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `PizzaPedido`
 --
 ALTER TABLE `PizzaPedido`
-  MODIFY `idPizzaPedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPizzaPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `TamanoPizza`
 --
 ALTER TABLE `TamanoPizza`
-  MODIFY `idTamanoPizza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idTamanoPizza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `Cliente`
+--
+ALTER TABLE `Cliente`
+  ADD CONSTRAINT `FK_3BA1A2B96D6D134` FOREIGN KEY (`id_fos`) REFERENCES `fos_user` (`id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
