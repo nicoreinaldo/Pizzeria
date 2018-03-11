@@ -509,6 +509,12 @@
       <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsmigratedoctrinecommand">doctrine_migrations.migrate_command</parameter>
       <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsstatusdoctrinecommand">doctrine_migrations.status_command</parameter>
       <parameter key="console.command.doctrine_bundle_migrationsbundle_command_migrationsversiondoctrinecommand">doctrine_migrations.version_command</parameter>
+      <parameter key="console.command.fos_userbundle_command_activateusercommand">fos_user.command.activate_user</parameter>
+      <parameter key="console.command.fos_userbundle_command_changepasswordcommand">fos_user.command.change_password</parameter>
+      <parameter key="console.command.fos_userbundle_command_createusercommand">fos_user.command.create_user</parameter>
+      <parameter key="console.command.fos_userbundle_command_deactivateusercommand">fos_user.command.deactivate_user</parameter>
+      <parameter key="console.command.fos_userbundle_command_demoteusercommand">fos_user.command.demote_user</parameter>
+      <parameter key="console.command.fos_userbundle_command_promoteusercommand">fos_user.command.promote_user</parameter>
       <parameter key="console.command.sensiolabs_security_command_securitycheckercommand">sensio_distribution.security_checker.command</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverruncommand">console.command.symfony_bundle_webserverbundle_command_serverruncommand</parameter>
       <parameter key="console.command.symfony_bundle_webserverbundle_command_serverstartcommand">console.command.symfony_bundle_webserverbundle_command_serverstartcommand</parameter>
@@ -720,7 +726,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>s+kULBOPys-6BGl0CUFyN7</argument>
+      <argument>kq83nbKuD+ckJVyYnxvS6a</argument>
       <argument>/home/nico/pizzeria/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -730,7 +736,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>s+kULBOPys-6BGl0CUFyN7</argument>
+      <argument>kq83nbKuD+ckJVyYnxvS6a</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1254,6 +1260,13 @@
             <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.pt.yml</argument>
             <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.pt.yml</argument>
           </argument>
+          <argument key="nb" type="collection">
+            <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf</argument>
+            <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf</argument>
+            <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.nb.xlf</argument>
+            <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.nb.yml</argument>
+            <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.nb.yml</argument>
+          </argument>
           <argument key="et" type="collection">
             <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf</argument>
             <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.et.xlf</argument>
@@ -1375,6 +1388,8 @@
           </argument>
           <argument key="nn" type="collection">
             <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nn.xlf</argument>
+            <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nn.xlf</argument>
+            <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.nn.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
             <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf</argument>
@@ -1532,10 +1547,6 @@
           </argument>
           <argument key="ua" type="collection">
             <argument>/home/nico/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.ua.xlf</argument>
-          </argument>
-          <argument key="nb" type="collection">
-            <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.nb.yml</argument>
-            <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.nb.yml</argument>
           </argument>
           <argument key="eo" type="collection">
             <argument>/home/nico/pizzeria/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.eo.yml</argument>
@@ -2087,6 +2098,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -2500,6 +2519,12 @@
       <call method="registerLoader">
         <argument>class_exists</argument>
       </call>
+    </service>
+    <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
+      <argument type="service" id="annotations.reader"/>
+      <argument type="service" id="1_cecd2e7b8568ae58d969a3764f572f79eac16b605f18d843db0359600c2e1d3f"/>
+      <argument>true</argument>
+      <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
     <service id="annotations.filesystem_cache" class="Doctrine\Common\Cache\FilesystemCache" public="false">
       <argument></argument>
@@ -3129,12 +3154,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a691315bb8d59.40321038</argument>
+      <argument>5aa46d109fdda6.87554204</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a691315bb8d59.40321038</argument>
+      <argument>5aa46d109fdda6.87554204</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3252,9 +3277,6 @@
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.httpfoundation"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.debug"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.form"/>
@@ -3414,9 +3436,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
     </service>
-    <service id="twig.extension.debug" class="Twig\Extension\DebugExtension" public="false">
-      <tag name="twig.extension"/>
-    </service>
+    <service id="twig.extension.debug" class="Twig\Extension\DebugExtension" public="false"/>
     <service id="twig.translation.extractor" class="Symfony\Bridge\Twig\Translation\TwigExtractor">
       <tag name="translation.extractor" alias="twig"/>
       <argument type="service" id="twig"/>
@@ -3426,6 +3446,7 @@
       <tag name="monolog.logger" channel="request"/>
       <argument>twig.controller.exception:showAction</argument>
       <argument type="service" id="monolog.logger.request" on-invalid="null"/>
+      <argument>true</argument>
     </service>
     <service id="twig.controller.exception" class="Symfony\Bundle\TwigBundle\Controller\ExceptionController">
       <argument type="service" id="twig"/>
@@ -4132,6 +4153,9 @@
     <service id="fos_user.user_provider.username_email" class="FOS\UserBundle\Security\EmailUserProvider" public="false">
       <argument type="service" id="fos_user.user_manager.default"/>
     </service>
+    <service id="fos_user.security.controller" class="FOS\UserBundle\Controller\SecurityController">
+      <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
+    </service>
     <service id="fos_user.util.canonicalizer.default" class="FOS\UserBundle\Util\Canonicalizer" public="false"/>
     <service id="fos_user.util.user_manipulator" class="FOS\UserBundle\Util\UserManipulator">
       <argument type="service" id="fos_user.user_manager.default"/>
@@ -4147,6 +4171,7 @@
       <argument type="service" id="fos_user.util.canonicalizer.default"/>
     </service>
     <service id="fos_user.mailer.default" class="FOS\UserBundle\Mailer\Mailer" public="false">
+      <tag name="fos_user.requires_swift"/>
       <argument type="service" id="swiftmailer.mailer.default"/>
       <argument type="service" id="router.default"/>
       <argument type="service" id="templating.engine.twig"/>
@@ -4164,6 +4189,7 @@
       </argument>
     </service>
     <service id="fos_user.mailer.twig_swift" class="FOS\UserBundle\Mailer\TwigSwiftMailer" public="false">
+      <tag name="fos_user.requires_swift"/>
       <argument type="service" id="swiftmailer.mailer.default"/>
       <argument type="service" id="router.default"/>
       <argument type="service" id="twig"/>
@@ -4187,6 +4213,30 @@
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="fos_user.security.login_manager"/>
       <argument>main</argument>
+    </service>
+    <service id="fos_user.command.activate_user" class="FOS\UserBundle\Command\ActivateUserCommand">
+      <tag name="console.command" command="fos:user:activate"/>
+      <argument type="service" id="fos_user.util.user_manipulator"/>
+    </service>
+    <service id="fos_user.command.change_password" class="FOS\UserBundle\Command\ChangePasswordCommand">
+      <tag name="console.command" command="fos:user:change-password"/>
+      <argument type="service" id="fos_user.util.user_manipulator"/>
+    </service>
+    <service id="fos_user.command.create_user" class="FOS\UserBundle\Command\CreateUserCommand">
+      <tag name="console.command" command="fos:user:create"/>
+      <argument type="service" id="fos_user.util.user_manipulator"/>
+    </service>
+    <service id="fos_user.command.deactivate_user" class="FOS\UserBundle\Command\DeactivateUserCommand">
+      <tag name="console.command" command="fos:user:deactivate"/>
+      <argument type="service" id="fos_user.util.user_manipulator"/>
+    </service>
+    <service id="fos_user.command.demote_user" class="FOS\UserBundle\Command\DemoteUserCommand">
+      <tag name="console.command" command="fos:user:demote"/>
+      <argument type="service" id="fos_user.util.user_manipulator"/>
+    </service>
+    <service id="fos_user.command.promote_user" class="FOS\UserBundle\Command\PromoteUserCommand">
+      <tag name="console.command" command="fos:user:promote"/>
+      <argument type="service" id="fos_user.util.user_manipulator"/>
     </service>
     <service id="fos_user.listener.flash" class="FOS\UserBundle\EventListener\FlashListener">
       <tag name="kernel.event_subscriber"/>
@@ -4213,6 +4263,11 @@
       <tag name="form.type" alias="fos_user_profile"/>
       <argument>AppBundle\Entity\User</argument>
     </service>
+    <service id="fos_user.profile.controller" class="FOS\UserBundle\Controller\ProfileController">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="fos_user.profile.form.factory"/>
+      <argument type="service" id="fos_user.user_manager.default"/>
+    </service>
     <service id="fos_user.registration.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
       <argument type="service" id="form.factory"/>
       <argument>fos_user_registration_form</argument>
@@ -4226,6 +4281,12 @@
       <tag name="form.type" alias="fos_user_registration"/>
       <argument>AppBundle\Entity\User</argument>
     </service>
+    <service id="fos_user.registration.controller" class="FOS\UserBundle\Controller\RegistrationController">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="fos_user.registration.form.factory"/>
+      <argument type="service" id="fos_user.user_manager.default"/>
+      <argument type="service" id="security.token_storage"/>
+    </service>
     <service id="fos_user.change_password.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
       <argument type="service" id="form.factory"/>
       <argument>fos_user_change_password_form</argument>
@@ -4238,6 +4299,11 @@
     <service id="fos_user.change_password.form.type" class="FOS\UserBundle\Form\Type\ChangePasswordFormType">
       <tag name="form.type" alias="fos_user_change_password"/>
       <argument>AppBundle\Entity\User</argument>
+    </service>
+    <service id="fos_user.change_password.controller" class="FOS\UserBundle\Controller\ChangePasswordController">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="fos_user.change_password.form.factory"/>
+      <argument type="service" id="fos_user.user_manager.default"/>
     </service>
     <service id="fos_user.resetting.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
       <argument type="service" id="form.factory"/>
@@ -4256,6 +4322,14 @@
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="router.default"/>
       <argument>86400</argument>
+    </service>
+    <service id="fos_user.resetting.controller" class="FOS\UserBundle\Controller\ResettingController">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="fos_user.resetting.form.factory"/>
+      <argument type="service" id="fos_user.user_manager.default"/>
+      <argument type="service" id="fos_user.util.token_generator.default"/>
+      <argument type="service" id="fos_user.mailer.default"/>
+      <argument>7200</argument>
     </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
@@ -4835,12 +4909,6 @@
         <argument key="validator.expression" type="service" id="validator.expression"/>
       </argument>
     </service>
-    <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
-      <tag name="annotations.cached_reader" provider="annotations.cache"/>
-      <argument type="service" id="annotations.reader"/>
-      <argument type="service" id="annotations.cache"/>
-      <argument>true</argument>
-    </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false" lazy="true">
       <argument>4sOAp7zVm5</argument>
       <argument>0</argument>
@@ -4852,7 +4920,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>G-GdiD0SHS</argument>
       <argument>0</argument>
-      <argument>s+kULBOPys-6BGl0CUFyN7</argument>
+      <argument>kq83nbKuD+ckJVyYnxvS6a</argument>
       <argument>/home/nico/pizzeria/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4860,7 +4928,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>5GTS-cyOZ2</argument>
       <argument>0</argument>
-      <argument>s+kULBOPys-6BGl0CUFyN7</argument>
+      <argument>kq83nbKuD+ckJVyYnxvS6a</argument>
       <argument>/home/nico/pizzeria/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4868,7 +4936,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>qMUBN9T6S9</argument>
       <argument>0</argument>
-      <argument>s+kULBOPys-6BGl0CUFyN7</argument>
+      <argument>kq83nbKuD+ckJVyYnxvS6a</argument>
       <argument>/home/nico/pizzeria/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4876,7 +4944,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>afZ0poFiqR</argument>
       <argument>0</argument>
-      <argument>s+kULBOPys-6BGl0CUFyN7</argument>
+      <argument>kq83nbKuD+ckJVyYnxvS6a</argument>
       <argument>/home/nico/pizzeria/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4975,12 +5043,17 @@
     <service id="doctrine.orm.default_entity_manager.event_manager" alias="doctrine.dbal.default_connection.event_manager" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
     <service id="fos_user.doctrine_registry" alias="doctrine" public="false"/>
-    <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
+    <service id="FOS\UserBundle\Security\LoginManagerInterface" alias="fos_user.security.login_manager" public="false"/>
+    <service id="FOS\UserBundle\Util\TokenGeneratorInterface" alias="fos_user.util.token_generator.default" public="false"/>
+    <service id="FOS\UserBundle\Util\PasswordUpdaterInterface" alias="fos_user.util.password_updater" public="false"/>
+    <service id="FOS\UserBundle\Util\CanonicalFieldsUpdater" alias="fos_user.util.canonical_fields_updater" public="false"/>
+    <service id="FOS\UserBundle\Model\UserManagerInterface" alias="fos_user.user_manager.default" public="false"/>
     <service id="fos_user.util.email_canonicalizer" alias="fos_user.util.canonicalizer.default"/>
     <service id="fos_user.util.username_canonicalizer" alias="fos_user.util.canonicalizer.default"/>
     <service id="fos_user.util.token_generator" alias="fos_user.util.token_generator.default"/>
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default"/>
-    <service id="FOS\UserBundle\Model\UserManagerInterface" alias="fos_user.user_manager.default" public="false"/>
+    <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
+    <service id="fos_user.session" alias="session" public="false"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="console.command.symfony_bundle_securitybundle_command_userpasswordencodercommand" alias="security.console.user_password_encoder_command"/>

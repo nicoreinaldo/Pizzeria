@@ -21,8 +21,6 @@ class Cliente
      */
     private $idcliente;
 
-
-
     /**
      * @ORM\OneToOne(targetEntity="User", inversedBy="Cliente")
      * @ORM\JoinColumn(name="id_fos", referencedColumnName="id")

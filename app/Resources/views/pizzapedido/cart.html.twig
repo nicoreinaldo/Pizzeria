@@ -41,7 +41,7 @@
 
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-            <li><a href="{{ path('cliente_new') }}">Realizar Pedido</a>
+            <li><a href="{{ path('pizzapedido_confirma') }}">Realizar Pedido</a>
             </li>
         {% else %}
             <a href="{{ path('fos_user_security_login') }}">Realizar pedido</a>
