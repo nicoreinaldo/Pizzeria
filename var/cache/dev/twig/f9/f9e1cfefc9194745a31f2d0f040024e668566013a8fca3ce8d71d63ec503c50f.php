@@ -1,6 +1,6 @@
 <?php
 
-/* pizzapedido/cart.html.twig */
+/* :pizzapedido:cart.html.twig */
 class __TwigTemplate_db77bba06c63d05d8b6054d98c5ae9d79bd9e32675e2bdf5052e209b278cf971 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_db77bba06c63d05d8b6054d98c5ae9d79bd9e32675e2bdf5052e209b278
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "pizzapedido/cart.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", ":pizzapedido:cart.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_db77bba06c63d05d8b6054d98c5ae9d79bd9e32675e2bdf5052e209b278
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizzapedido/cart.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":pizzapedido:cart.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizzapedido/cart.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":pizzapedido:cart.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -143,7 +143,7 @@ class __TwigTemplate_db77bba06c63d05d8b6054d98c5ae9d79bd9e32675e2bdf5052e209b278
 
     public function getTemplateName()
     {
-        return "pizzapedido/cart.html.twig";
+        return ":pizzapedido:cart.html.twig";
     }
 
     public function isTraitable()
@@ -219,6 +219,6 @@ class __TwigTemplate_db77bba06c63d05d8b6054d98c5ae9d79bd9e32675e2bdf5052e209b278
         </li>
     </ul>
 {% endblock %}
-", "pizzapedido/cart.html.twig", "/home/nico/pizzeria/app/Resources/views/pizzapedido/cart.html.twig");
+", ":pizzapedido:cart.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/pizzapedido/cart.html.twig");
     }
 }

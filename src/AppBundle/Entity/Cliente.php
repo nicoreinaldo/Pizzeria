@@ -154,5 +154,6 @@ class Cliente
 
     public function __toString(){
         return (string) $this->user;
+
     }
 }

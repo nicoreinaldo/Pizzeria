@@ -33,13 +33,13 @@
             </tr>
         </thead>
         <tbody>
+
         {% for pedido in pedidos %}
+            {{ pedidos["idpizzapedido"] }}
+
             <tr>
-                <td><a href="{{ path('pedido_show', { 'idpedido': pedido.idpedido }) }}">{{ pedido.idpedido }}</a></td>
-                <td> NULL</td>
-                <td> NULL</td>
-                <td>{% if pedido.fecha %}{{ pedido.fecha|date('Y-m-d') }}{% endif %}</td>
-                {# <td>{{ pedido.idEstadoPedido.nombre }}</td> #}
+
+                {# <td>{{ pedido.iddEstadoPedido.nombre }}</td> #}
 {#                 <td>
                     {% for pizzapedido in pizzapedidos %}
                         {% if pedido.idpedido == pizzapedido.idPedido.idPedido %}

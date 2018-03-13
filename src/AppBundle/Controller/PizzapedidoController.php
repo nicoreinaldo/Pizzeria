@@ -182,7 +182,6 @@ class PizzapedidoController extends Controller
         $cliente=$user_repo->findOneByUser($user);
 
         $cart=$this->session->get('cart');
-        $pizzapedido = new Pizzapedido();
 
         $pedido= new Pedido();
         $pedido->setIdcliente($cliente);
@@ -193,17 +192,30 @@ class PizzapedidoController extends Controller
         $em->flush();
 
         $idPedido=$pedido->getIdpedido();
+
+
+
         $pedido_repo= $em->getRepository("AppBundle:Pedido");
-        $pedido=$pedido_repo->find($idPedido);
+        $pedidoid=$pedido_repo->find($idPedido);
 
 
         foreach ($cart as $pizza) {
-            $pizzapedido->setIdpedido($pedido);
-            $pizzapedido->setIdpizza($pizza);
-            $em = $this->getDoctrine()->getManager();
-            $em->merge($pizzapedido);
+
+
+
+            $pizzapedido = new Pizzapedido();
+
+            $pizzaid = $em->getRepository('AppBundle:Pizza')->find(1);
+
+            $pizzapedido->setPedido($pedidoid);
+            $pizzapedido->setPizza( $pizzaid);
+
+
+            $em->persist($pizzapedido);
             $em->flush();
         }
+
+
         $this->session->remove('cart');
         return $this->redirectToRoute('pizza_index');
 

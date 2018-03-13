@@ -490,6 +490,6 @@ class __TwigTemplate_c7d5a4f45a04e6d6ea509f787342260ff84e35b0b67a15023de00f98cf5
     <script src=\"{{asset('asset/js/wow/wow.min.js')}}\"></script> 
 {% endblock %}
 </body>
-</html>", "base.html.twig", "/home/nico/pizzeria/app/Resources/views/base.html.twig");
+</html>", "base.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/base.html.twig");
     }
 }

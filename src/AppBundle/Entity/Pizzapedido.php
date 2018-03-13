@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Pizzapedido
  *
- * @ORM\Table(name="PizzaPedido", indexes={@ORM\Index(name="idPizza_idx", columns={"idPizza"}), @ORM\Index(name="idPedido_idx", columns={"idPedido"})})
+ * @ORM\Table(name="PizzaPedido")
  * @ORM\Entity
  */
 class Pizzapedido
@@ -21,19 +21,8 @@ class Pizzapedido
      */
     private $idpizzapedido;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idPizza", type="integer", nullable=true)
-     */
-    private $idpizza;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idPedido", type="integer", nullable=true)
-     */
-    private $idpedido;
+
 
 
 
@@ -47,51 +36,65 @@ class Pizzapedido
         return $this->idpizzapedido;
     }
 
+
     /**
-     * Set idpizza
+     * @ORM\ManyToOne(targetEntity="Pizza", inversedBy="pizzapedido")
+     * @ORM\JoinColumn(name="pizza_id", referencedColumnName="idPizza")
+     */
+    private $pizza;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Pedido", inversedBy="pizzapedido")
+     * @ORM\JoinColumn(name="pedido_id", referencedColumnName="idPedido")
+     */
+    private $pedido;
+
+
+    /**
+     * Set pizza
      *
-     * @param integer $idpizza
+     * @param \AppBundle\Entity\Pizza $pizza
      *
      * @return Pizzapedido
      */
-    public function setIdpizza($idpizza)
+    public function setPizza(\AppBundle\Entity\Pizza $pizza = null)
     {
-        $this->idpizza = $idpizza;
+        $this->pizza = $pizza;
 
         return $this;
     }
 
     /**
-     * Get idpizza
+     * Get pizza
      *
-     * @return integer
+     * @return \AppBundle\Entity\Pizza
      */
-    public function getIdpizza()
+    public function getPizza()
     {
-        return $this->idpizza;
+        return $this->pizza;
     }
 
     /**
-     * Set idpedido
+     * Set pedido
      *
-     * @param integer $idpedido
+     * @param \AppBundle\Entity\Pedido $pedido
      *
      * @return Pizzapedido
      */
-    public function setIdpedido($idpedido)
+    public function setPedido(\AppBundle\Entity\Pedido $pedido = null)
     {
-        $this->idpedido = $idpedido;
+        $this->pedido = $pedido;
 
         return $this;
     }
 
     /**
-     * Get idpedido
+     * Get pedido
      *
-     * @return integer
+     * @return \AppBundle\Entity\Pedido
      */
-    public function getIdpedido()
+    public function getPedido()
     {
-        return $this->idpedido;
+        return $this->pedido;
     }
 }

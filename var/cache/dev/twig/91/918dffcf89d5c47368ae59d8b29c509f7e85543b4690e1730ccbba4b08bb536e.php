@@ -324,6 +324,6 @@ class __TwigTemplate_d456226cfe332849d468d5bcb5fba8025597b7e65674f407fadbe21d4e5
 <script type=\"text/javascript\" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 {% block javascripts %}{% endblock %}
 </body>
-</html>", "::baseFos.html.twig", "/home/nico/pizzeria/app/Resources/views/baseFos.html.twig");
+</html>", "::baseFos.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/baseFos.html.twig");
     }
 }

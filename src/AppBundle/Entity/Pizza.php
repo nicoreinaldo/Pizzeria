@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Pizza
@@ -155,5 +156,58 @@ class Pizza
     public function getDescripcion()
     {
         return $this->descripcion;
+
     }
+
+    /**
+     * @ORM\OneToMany(targetEntity="Pizzapedido", mappedBy="pizza")
+     */
+    private $pizzapedido;
+
+
+    public function __construct()
+    {
+        $this->pizzapedido = new ArrayCollection();
+    }
+
+    /**
+     * Add pizzapedido
+     *
+     * @param \AppBundle\Entity\Pizzapedido $pizzapedido
+     *
+     * @return Pizza
+     */
+    public function addPizzapedido(\AppBundle\Entity\Pizzapedido $pizzapedido)
+    {
+        $this->pizzapedido[] = $pizzapedido;
+
+        return $this;
+    }
+
+    /**
+     * Remove pizzapedido
+     *
+     * @param \AppBundle\Entity\Pizzapedido $pizzapedido
+     */
+    public function removePizzapedido(\AppBundle\Entity\Pizzapedido $pizzapedido)
+    {
+        $this->pizzapedido->removeElement($pizzapedido);
+    }
+
+    /**
+     * Get pizzapedido
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPizzapedido()
+    {
+        return $this->pizzapedido;
+    }
+
+    public function __toString(){
+        return (string) $this->nombre;
+
+    }
+
+
 }

@@ -1,6 +1,6 @@
 <?php
 
-/* default/header.html.twig */
+/* :default:header.html.twig */
 class __TwigTemplate_7345f4ddee0478a6200c74d6a79215d7152d0f28a2dc1f82b63c7492b5cc2495 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -16,10 +16,10 @@ class __TwigTemplate_7345f4ddee0478a6200c74d6a79215d7152d0f28a2dc1f82b63c7492b5c
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:header.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/header.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":default:header.html.twig"));
 
         // line 1
         echo "
@@ -127,7 +127,7 @@ class __TwigTemplate_7345f4ddee0478a6200c74d6a79215d7152d0f28a2dc1f82b63c7492b5c
 
     public function getTemplateName()
     {
-        return "default/header.html.twig";
+        return ":default:header.html.twig";
     }
 
     public function isTraitable()
@@ -215,6 +215,6 @@ class __TwigTemplate_7345f4ddee0478a6200c74d6a79215d7152d0f28a2dc1f82b63c7492b5c
         </div>
         </div>
     </nav>
-</header>", "default/header.html.twig", "/home/nico/pizzeria/app/Resources/views/default/header.html.twig");
+</header>", ":default:header.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/default/header.html.twig");
     }
 }
