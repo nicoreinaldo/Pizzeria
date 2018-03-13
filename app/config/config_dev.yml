@@ -40,5 +40,7 @@ monolog:
         #    level: info
 
 
-#swiftmailer:
-#    delivery_addresses: ['me@example.com']
+swiftmailer:
+    transport: gmail
+    username:  f.reinaldo@itecriocuarto.org.ar
+    password:  123analia

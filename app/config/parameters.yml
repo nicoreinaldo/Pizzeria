@@ -7,6 +7,6 @@ parameters:
     database_password: root
     mailer_transport: smtp
     mailer_host: 127.0.0.1
-    mailer_user: nicoreinaldo@hotmail.com
-    mailer_password: 2pepino
+    mailer_user: f.reinaldo@itecriocuarto.org.ar
+    mailer_password: 123analia
     secret: ThisTokenIsNotSoSecretChangeIt

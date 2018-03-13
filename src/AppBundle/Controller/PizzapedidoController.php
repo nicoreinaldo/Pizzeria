@@ -176,17 +176,22 @@ class PizzapedidoController extends Controller
         $estado_repo = $em->getRepository("AppBundle:Estadopedido");
         $estadonuevo = $estado_repo->find(1);
 
+        $user = $em->getRepository('AppBundle:User')->find($this->getUser()->getId());
+
         $user_repo= $em->getRepository("AppBundle:Cliente");
-        $cliente=$user_repo->find($Idcliente);
-        
+        $cliente=$user_repo->findOneByUser($user);
+
         $cart=$this->session->get('cart');
         $pizzapedido = new Pizzapedido();
+
         $pedido= new Pedido();
-        $pedido->setFecha(date_create(date("Y-m-d")));
         $pedido->setIdcliente($cliente);
         $pedido->setIdestadopedido($estadonuevo);
+        $pedido->setFecha(date_create(date("Y-m-d")));
+
         $em->persist($pedido);
         $em->flush();
+
         $idPedido=$pedido->getIdpedido();
         $pedido_repo= $em->getRepository("AppBundle:Pedido");
         $pedido=$pedido_repo->find($idPedido);
