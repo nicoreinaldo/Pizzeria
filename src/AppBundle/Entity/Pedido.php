@@ -23,10 +23,10 @@ class Pedido
     private $idpedido;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="idCliente", type="integer", nullable=true)
+     * @ORM\OneToOne(targetEntity="Cliente", inversedBy="Pedido")
+     * @ORM\JoinColumn(name="idcliente", referencedColumnName="idCliente")
      */
+    
     private $idcliente;
 
     /**
@@ -39,7 +39,7 @@ class Pedido
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecha", type="date", nullable=false)
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
      */
     private $fecha;
 

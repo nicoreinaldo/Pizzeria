@@ -22,10 +22,6 @@ class Pizzapedido
     private $idpizzapedido;
 
 
-
-
-
-
     /**
      * Get idpizzapedido
      *

@@ -185,19 +185,17 @@ class PizzapedidoController extends Controller
 
         $pedido= new Pedido();
         $pedido->setIdcliente($cliente);
-        $pedido->setIdestadopedido($estadonuevo);
-        $pedido->setFecha(date_create(date("Y-m-d")));
-
+        $pedido->setIdestadopedido(1);
+        $pedido->setFecha(date_create(date("Y-m-d H:i:s")));
+   
         $em->persist($pedido);
         $em->flush();
 
         $idPedido=$pedido->getIdpedido();
 
 
-
         $pedido_repo= $em->getRepository("AppBundle:Pedido");
         $pedidoid=$pedido_repo->find($idPedido);
-
 
         foreach ($cart as $pizza) {
 
@@ -205,11 +203,15 @@ class PizzapedidoController extends Controller
 
             $pizzapedido = new Pizzapedido();
 
-            $pizzaid = $em->getRepository('AppBundle:Pizza')->find(1);
+            $pizza_rep = $em->getRepository('AppBundle:Pizza');
+            $pizzaid = $pizza_rep->find($idpizza);
+            var_dump($pizzaid);
+            die();
+;
 
             $pizzapedido->setPedido($pedidoid);
             $pizzapedido->setPizza( $pizzaid);
-
+      
 
             $em->persist($pizzapedido);
             $em->flush();

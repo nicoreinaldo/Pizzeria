@@ -169,11 +169,11 @@ class RegistrationController extends Controller
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
-
-        return $this->render('@FOSUser/Registration/confirmed.html.twig', array(
-            'user' => $user,
-            'targetUrl' => $this->getTargetUrlFromSession($request->getSession()),
-        ));
+        return $this->redirectToRoute('cliente_new');
+        // return $this->render('@FOSUser/Registration/confirmed.html.twig', array(
+        //     'user' => $user,
+        //     'targetUrl' => $this->getTargetUrlFromSession($request->getSession()),
+        // ));
     }
 
     /**

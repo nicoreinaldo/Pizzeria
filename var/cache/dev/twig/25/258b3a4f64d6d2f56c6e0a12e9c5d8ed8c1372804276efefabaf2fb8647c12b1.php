@@ -1,6 +1,6 @@
 <?php
 
-/* :pizza:index.html.twig */
+/* pizza/index.html.twig */
 class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1ba2809 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":pizza:index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "pizza/index.html.twig", 1);
         $this->blocks = array(
             'styleshetts' => array($this, 'block_styleshetts'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":pizza:index.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizza/index.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":pizza:index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "pizza/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -100,14 +100,14 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
         // line 26
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_FULLY")) {
             // line 27
-            echo "                        <a href=\"";
+            echo "                            <a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizzapedido_cart");
             echo "\" class=\"btn btn-danger\">Ver Carrito</a>
                     ";
         } else {
             // line 29
             echo "                        <a href=\"";
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cliente_index");
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
             echo "\"</a>
                     ";
         }
@@ -256,7 +256,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
 
     public function getTemplateName()
     {
-        return ":pizza:index.html.twig";
+        return "pizza/index.html.twig";
     }
 
     public function isTraitable()
@@ -305,9 +305,9 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
                 {% endif %}
                 <div class=\"btn-group\">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a href=\"{{ path('pizzapedido_cart') }}\" class=\"btn btn-danger\">Ver Carrito</a>
+                            <a href=\"{{ path('pizzapedido_cart') }}\" class=\"btn btn-danger\">Ver Carrito</a>
                     {% else %}
-                        <a href=\"{{ path('cliente_index') }}\"</a>
+                        <a href=\"{{ path('fos_user_security_login') }}\"</a>
                     {% endif %}
                 </div>
             </div>
@@ -388,6 +388,6 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
 
     </script>
 {% endblock %}
-", ":pizza:index.html.twig", "/home/manuel/symfony/Pizzeria/app/Resources/views/pizza/index.html.twig");
+", "pizza/index.html.twig", "/home/nico/pizzeria/app/Resources/views/pizza/index.html.twig");
     }
 }

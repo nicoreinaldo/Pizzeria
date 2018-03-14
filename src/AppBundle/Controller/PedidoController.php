@@ -19,7 +19,7 @@ class PedidoController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('AppBundle:User')->find($this->getUser()->getId());
+        $user = $em->getRepository('AppBundle:User')->find($this->getIdpizza()->getId());
 
         $user_repo= $em->getRepository("AppBundle:Cliente");
         $cliente=$user_repo->findOneByUser($user);
