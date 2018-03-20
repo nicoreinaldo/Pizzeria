@@ -18,7 +18,6 @@ class Cliente
      * @ORM\Column(name="idCliente", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
-     * @ORM\OneToOne(targetEntity="Pedido", mappedBy="cliente")
      */
     private $idcliente;
 

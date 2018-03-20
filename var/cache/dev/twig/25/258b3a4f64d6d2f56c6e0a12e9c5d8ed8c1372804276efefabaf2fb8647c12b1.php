@@ -138,48 +138,52 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
                                             <div class=\"col-md-4 portfolio-grids\">
                                                 <div class=\"sc-product-item thumbnail\">
                                                     <div class=\"caption\">
-                                                        <h4 data-name=\"product_name\">";
+                                                        <img src=\"";
             // line 52
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("asset/images/pizza.png"), "html", null, true);
+            echo "\">
+                                                        <h4 data-name=\"product_name\">";
+            // line 53
             echo twig_escape_filter($this->env, $this->getAttribute($context["pizza"], "nombre", array()), "html", null, true);
             echo "</h4>
                                                         <p data-name=\"product_desc\">";
-            // line 53
+            // line 54
             echo twig_escape_filter($this->env, $this->getAttribute($context["pizza"], "descripcion", array()), "html", null, true);
             echo "</p>
                                                         <hr class=\"line\">
                                                         <div>
                                                             <h4 class=\"price pull-left espacio\">\$";
-            // line 56
+            // line 57
             echo twig_escape_filter($this->env, $this->getAttribute($context["pizza"], "precio", array()), "html", null, true);
             echo "</h4>
                                                             ";
-            // line 57
+            // line 58
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-                // line 58
+                // line 59
                 echo "                                                                <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizza_show", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
                 echo "\" class=\"btn btn-primary\" >Ver</a>
                                                                 <a href=\"";
-                // line 59
+                // line 60
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizza_edit", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
                 echo "\" class=\"btn btn-primary\">Editar</a>
                                                             ";
             }
-            // line 61
+            // line 62
             echo "                                                            ";
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_FULLY")) {
-                // line 62
+                // line 63
                 echo "                                                                <a type=\"button\"  id = \"click\" class=\"sc-add-to-cart btn btn-success btn-sm pull-right\"  href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("pizzapedido_agregar_pizza", array("idpizza" => $this->getAttribute($context["pizza"], "idpizza", array()))), "html", null, true);
                 echo "\"  >Agregar al Carrito</a>
                                                             ";
             } else {
-                // line 64
+                // line 65
                 echo "                                                                <input type=\"button\" value=\"Agregar al Carrito\" id = \"clickme\" Class=\" btn btn-success btn-sm pull-right\"   class=\"btn btn-primary\" > </a>
                                                             
                                                             ";
             }
-            // line 67
+            // line 68
             echo "                                                            
                                                         </div>
                                                         <div class=\"clearfix\"></div>
@@ -193,7 +197,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pizza'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 76
+        // line 77
         echo "                                </div>
                             </div>
     </section>
@@ -207,7 +211,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
 
     }
 
-    // line 82
+    // line 83
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -216,7 +220,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 83
+        // line 84
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -266,7 +270,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
 
     public function getDebugInfo()
     {
-        return array (  220 => 83,  211 => 82,  197 => 76,  183 => 67,  178 => 64,  172 => 62,  169 => 61,  164 => 59,  159 => 58,  157 => 57,  153 => 56,  147 => 53,  143 => 52,  137 => 48,  133 => 47,  115 => 31,  109 => 29,  103 => 27,  101 => 26,  98 => 25,  92 => 22,  89 => 21,  87 => 20,  76 => 11,  67 => 10,  53 => 5,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  224 => 84,  215 => 83,  201 => 77,  187 => 68,  182 => 65,  176 => 63,  173 => 62,  168 => 60,  163 => 59,  161 => 58,  157 => 57,  151 => 54,  147 => 53,  143 => 52,  137 => 48,  133 => 47,  115 => 31,  109 => 29,  103 => 27,  101 => 26,  98 => 25,  92 => 22,  89 => 21,  87 => 20,  76 => 11,  67 => 10,  53 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -330,6 +334,7 @@ class __TwigTemplate_fcf12de43601c43956ceead8769df52cec1db748e61322390184e2cce1b
                                             <div class=\"col-md-4 portfolio-grids\">
                                                 <div class=\"sc-product-item thumbnail\">
                                                     <div class=\"caption\">
+                                                        <img src=\"{{asset('asset/images/pizza.png')}}\">
                                                         <h4 data-name=\"product_name\">{{ pizza.nombre }}</h4>
                                                         <p data-name=\"product_desc\">{{ pizza.descripcion }}</p>
                                                         <hr class=\"line\">

@@ -16,61 +16,59 @@ class PedidoController extends Controller
      * Lists all pedido entities.
      *
      */
-    public function indexAction()
+       public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('AppBundle:User')->find($this->getIdpizza()->getId());
 
-        $user_repo= $em->getRepository("AppBundle:Cliente");
-        $cliente=$user_repo->findOneByUser($user);
+        $pedidos = $em->getRepository('AppBundle:Pedido')->findAll();
+        $pizzapedidos = $em->getRepository('AppBundle:Pizzapedido')->findAll();
+        $cliente = $em->getRepository('AppBundle:Cliente')->findAll();
 
-        $pedidos[0] = $em->getRepository('AppBundle:Pedido')->findByIdcliente(1);
-
-
-        $repository = $em->getRepository("AppBundle:Pizzapedido");
-
-        $query = $repository->createQueryBuilder('p')
-            ->select(array(
-                    'p.idpizzapedido as pizzapedido',
-                    'u.nombre as pizza',
-                    'pf.idcliente as cliente',
-                    'c.nombre as nombrecliente'
-
-
-                )
-            )
-            ->innerJoin('AppBundle:Pizza', 'u', 'WITH', 'u.idpizza =  p.pizza')
-            ->innerJoin('AppBundle:Pedido', 'pf', 'WITH', 'p.pedido = pf.idpedido')
-            ->innerJoin('AppBundle:Cliente', 'c', 'WITH', 'c.idcliente = pf.idcliente')
-
-            ->where('c.idcliente = :idcliente')
-            ->setParameter('idcliente', intval(5));
-
-
-        $pedidos=$query->getQuery()->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
-//
-//        $repository = $em->getRepository("AppBundle:Pedido");
-//
-//        $query = $repository->createQueryBuilder('p')
-//            ->select(array(
-//                    'p',
-//
-//
-//                )
-//            )
-//
-//            ->where('p.idcliente = :idcliente')
-//            ->setParameter('idcliente', intval(1));
-//
-//
-//        $pedidos=$query->getQuery()->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
-
-var_dump($pedidos);
-die();
         return $this->render('pedido/index.html.twig', array(
             'pedidos' => $pedidos,
+            'pizzapedidos' => $pizzapedidos,
+            'cliente'=> $cliente,
+            
         ));
     }
+    // public function indexAction()
+    // {
+    //     $em = $this->getDoctrine()->getManager();
+    //     $user = $em->getRepository('AppBundle:User')->find($this->getUser()->getId());
+
+    //     $user_repo= $em->getRepository("AppBundle:Cliente");
+    //     $cliente=$user_repo->findOneByUser($user);
+
+    //     $pedidos[0] = $em->getRepository('AppBundle:Pedido')->findAll();//findByIdcliente($cliente);
+  
+
+
+    //     $repository = $em->getRepository("AppBundle:Pizzapedido");
+
+    //     $query = $repository->createQueryBuilder('p')
+    //         ->select(array(
+    //                 'p.idpizzapedido as pizzapedido',
+    //                 'u.nombre as pizza',
+    //                 'pf.idcliente as cliente',
+    //                 'c.nombre as nombrecliente'
+    //             )
+    //         )
+    //         ->innerJoin('AppBundle:Pizza', 'u', 'WITH', 'u.idpizza =  p.pizza')
+    //         ->innerJoin('AppBundle:Pedido', 'pf', 'WITH', 'p.pedido = pf.idpedido')
+    //         ->innerJoin('AppBundle:Cliente', 'c', 'WITH', 'c.idcliente = pf.idcliente')
+
+    //         ->where('c.idcliente = :idcliente');
+    //       //   ->setParameter('idcliente', intval(2));
+  
+
+    //     $pedidos=$query->getQuery()->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
+
+
+
+    //     return $this->render('pedido/index.html.twig', array(
+    //         'pedidos' => $pedidos,
+    //     ));
+    // }
 
 
     /**

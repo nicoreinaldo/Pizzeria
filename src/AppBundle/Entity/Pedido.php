@@ -23,9 +23,10 @@ class Pedido
     private $idpedido;
 
     /**
-     * @ORM\OneToOne(targetEntity="Cliente", inversedBy="Pedido")
+     * @ORM\ManyToOne(targetEntity="Cliente", inversedBy="Pedido")
      * @ORM\JoinColumn(name="idcliente", referencedColumnName="idCliente")
      */
+
     
     private $idcliente;
 

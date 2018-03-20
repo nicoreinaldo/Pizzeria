@@ -41,7 +41,7 @@
 
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-            <li><a href="{{ path('pizzapedido_confirma') }}">Realizar Pedido</a>
+            <li><a onclick="mensaje()" href="{{ path('pizzapedido_confirma') }}">Realizar Pedido</a>
             </li>
         {% else %}
             <a href="{{ path('fos_user_security_login') }}">Realizar pedido</a>
@@ -50,4 +50,10 @@
             <a href="{{ path('pizza_index') }}">Volver</a>
         </li>
     </ul>
+    <script type="text/javascript">
+    function mensaje(){
+        alert("El pedido fue Confirmado");
+    }
+</script>
 {% endblock %}
+

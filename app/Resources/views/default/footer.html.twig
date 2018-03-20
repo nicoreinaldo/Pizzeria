@@ -24,20 +24,20 @@
 									</div>
 								</div>
 							</div>
-							<form action="enviar.php" method="post">
+							<form action="/enviar" method="post">
 							<div class="contact_form_area">
 								<h4>Formulario de contacto</h4>
 									<div class="row">
 										<div class="col-sm-6 col-xs-6">
 											<div class="form-group">
 												<label for="name">Nombre </label>
-												<input type="text" class="form-control" id="name" placeholder="Nombre">
+												<input type="text" class="form-control" id="name" name="nombre" placeholder="Nombre">
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-6">
 											<div class="form-group">
 												<label for="email">E-mail</label>
-												<input type="email" class="form-control" id="email" placeholder="Email">
+												<input type="email" class="form-control" id="email" name= "desde" placeholder="Email">
 											</div>
 										</div>
 									</div>
@@ -45,7 +45,7 @@
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label for="mensaje">Mensaje</label>
-												<textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje"></textarea>
+												<textarea class="form-control" id="mensaje" rows="3" name="mensaje" placeholder="Mensaje"></textarea>
 											</div>
 										</div>
 										<div class="form_btn_area text-center">

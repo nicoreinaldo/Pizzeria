@@ -23,37 +23,37 @@
         <table id="example1" class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Idpedido</th>
+                <th>Id</th>
                 <th>Cliente</th>
                 <th>Direccion de envio</th>
-                <th>Fecha</th>
-{#                 <th>Estado</th> #}
-{#                 <th>Detalle</th>
-                <th>Accion</th> #}
+                <th>Fecha Pedido</th>
+                <th>Estado</th>
+                <th>Pizza</th>
+                <th>Accion</th>
             </tr>
         </thead>
         <tbody>
 
+
         {% for pedido in pedidos %}
-            {{ pedidos["idpizzapedido"] }}
 
             <tr>
-
-                {# <td>{{ pedido.iddEstadoPedido.nombre }}</td> #}
-{#                 <td>
-                    {% for pizzapedido in pizzapedidos %}
-                        {% if pedido.idpedido == pizzapedido.idPedido.idPedido %}
-                                {{ pizzapedido.idPizza.nombre }}
-                            <br>
-                        {% endif %}
-                    {% endfor %}
-                </td> #}
-                </td>{# 
-                    <td>
-                        <ul>
-                            <a href="{{ path('pedido_edit', { 'idpedido': pedido.idpedido }) }}" class="btn btn-warning">Editar</a>
-                        </ul>
-                    </td> #}
+            <td>{{ pedido.idpedido }}</td>
+            <td>{{ pedido.idCliente.nombre }}</td>
+            <td>{{ pedido.idCliente.direccion}}</td>
+            <td>{% if  pedido.fecha %}{{ pedido.fecha|date("Y-m-d H:i:s")}}
+                {% endif %}
+            </td>
+            <td>{{ pedido.idEstadoPedido}}</td>
+            <td>
+            {% for pizzapedido in pizzapedidos %}
+                {% if pedido.idpedido == pizzapedido.pedido.idPedido %}
+                        {{ pizzapedido.Pizza.nombre }}
+                    <br>
+                {% endif %}
+            {% endfor %}
+            </td>
+            <td><a href="{{ path('pedido_edit', { 'idpedido': pedido.idpedido }) }}" class="btn btn-warning">Editar</a></td>      
             </tr>
         {% endfor %}
         </tbody>

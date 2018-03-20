@@ -112,69 +112,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => '',);
         }
 
-        if (0 === strpos($pathinfo, '/cliente')) {
-            // cliente_index
-            if ('/cliente' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_cliente_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'cliente_index');
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\ClienteController::indexAction',  '_route' => 'cliente_index',);
-            }
-            not_cliente_index:
-
-            // cliente_show
-            if (preg_match('#^/cliente/(?P<idcliente>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_cliente_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cliente_show')), array (  '_controller' => 'AppBundle\\Controller\\ClienteController::showAction',));
-            }
-            not_cliente_show:
-
-            // cliente_new
-            if ('/cliente/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_cliente_new;
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\ClienteController::newAction',  '_route' => 'cliente_new',);
-            }
-            not_cliente_new:
-
-            // cliente_edit
-            if (preg_match('#^/cliente/(?P<idcliente>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_cliente_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cliente_edit')), array (  '_controller' => 'AppBundle\\Controller\\ClienteController::editAction',));
-            }
-            not_cliente_edit:
-
-            // cliente_delete
-            if (preg_match('#^/cliente/(?P<idcliente>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_cliente_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cliente_delete')), array (  '_controller' => 'AppBundle\\Controller\\ClienteController::deleteAction',));
-            }
-            not_cliente_delete:
-
+        // Envio
+        if ('/enviar' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::sendEmail',  '_route' => 'Envio',);
         }
 
-        elseif (0 === strpos($pathinfo, '/estadopedido')) {
+        if (0 === strpos($pathinfo, '/estadopedido')) {
             // estadopedido_index
             if ('/estadopedido' === $trimmedPathinfo) {
                 if ('GET' !== $canonicalMethod) {
@@ -233,6 +176,68 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'estadopedido_delete')), array (  '_controller' => 'AppBundle\\Controller\\EstadopedidoController::deleteAction',));
             }
             not_estadopedido_delete:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/cliente')) {
+            // cliente_index
+            if ('/cliente' === $trimmedPathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_cliente_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($rawPathinfo.'/', 'cliente_index');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\ClienteController::indexAction',  '_route' => 'cliente_index',);
+            }
+            not_cliente_index:
+
+            // cliente_show
+            if (preg_match('#^/cliente/(?P<idcliente>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_cliente_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cliente_show')), array (  '_controller' => 'AppBundle\\Controller\\ClienteController::showAction',));
+            }
+            not_cliente_show:
+
+            // cliente_new
+            if ('/cliente/new' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_cliente_new;
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\ClienteController::newAction',  '_route' => 'cliente_new',);
+            }
+            not_cliente_new:
+
+            // cliente_edit
+            if (preg_match('#^/cliente/(?P<idcliente>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_cliente_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cliente_edit')), array (  '_controller' => 'AppBundle\\Controller\\ClienteController::editAction',));
+            }
+            not_cliente_edit:
+
+            // cliente_delete
+            if (preg_match('#^/cliente/(?P<idcliente>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ('DELETE' !== $canonicalMethod) {
+                    $allow[] = 'DELETE';
+                    goto not_cliente_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cliente_delete')), array (  '_controller' => 'AppBundle\\Controller\\ClienteController::deleteAction',));
+            }
+            not_cliente_delete:
 
         }
 

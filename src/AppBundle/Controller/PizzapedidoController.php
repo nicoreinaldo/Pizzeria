@@ -193,26 +193,23 @@ class PizzapedidoController extends Controller
 
         $idPedido=$pedido->getIdpedido();
 
-
         $pedido_repo= $em->getRepository("AppBundle:Pedido");
         $pedidoid=$pedido_repo->find($idPedido);
 
+
+
+
         foreach ($cart as $pizza) {
 
-
-
             $pizzapedido = new Pizzapedido();
+            
+            $pizza_rep = $em->getRepository('AppBundle:Pizza') ;
+            $pizzaid = $pizza_rep->find($pizza);
 
-            $pizza_rep = $em->getRepository('AppBundle:Pizza');
-            $pizzaid = $pizza_rep->find($idpizza);
-            var_dump($pizzaid);
-            die();
-;
 
+            $pizzapedido->setPizza($pizzaid);
             $pizzapedido->setPedido($pedidoid);
-            $pizzapedido->setPizza( $pizzaid);
-      
-
+            
             $em->persist($pizzapedido);
             $em->flush();
         }
